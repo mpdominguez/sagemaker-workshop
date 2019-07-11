@@ -1,5 +1,5 @@
 ---
-title: "Amazon EKS Workshop"
+title: "Amazon Sagemaker Workshop"
 chapter: true
 weight: 1
 ---
