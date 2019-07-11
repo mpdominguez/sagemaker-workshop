@@ -12,7 +12,7 @@ relativeURLs = true
 hrefTargetBlank = true
 
 [params]
-editURL = "https://github.com/aws-samples/eks-workshop/edit/master/content/"
+editURL = "https://github.com/mpdominguez/sagemaker-workshop/edit/master/content/"
 themeVariant = "mine"
 showVisitedLinks = false
 author = "Brent Langston"
@@ -22,7 +22,7 @@ disableAssetsBusting = false
 disableLanguageSwitchingButton = true
 disableShortcutsTitle=false
 disableInlineCopyToClipBoard = true
-ghrepo = "https://github.com/aws-samples/eks-workshop/"
+ghrepo = "https://github.com/mpdominguez/sagemaker-workshop/"
 branch = "master"
 template_bucket = "eksworkshop.com"
 pygmentsUseClasses = true
@@ -54,12 +54,12 @@ weight = 20
 
 [[menu.shortcuts]]
 name = "<i class='fab fa-github'></i> GitHub Project"
-url = "https://github.com/aws-samples/eks-workshop"
+url = "https://github.com/mpdominguez/sagemaker-workshop"
 weight = 30
 
 [[menu.shortcuts]]
 name = "<i class='fas fa-envelope'></i> Have questions?"
-url = "mailto:eksworkshop@amazon.com"
+url = "mailto:sagemakerworkshop@amazon.com"
 weight = 40
 
 

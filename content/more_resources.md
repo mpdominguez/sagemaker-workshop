@@ -7,10 +7,11 @@ Discover more AWS resources for building and running your application on AWS:
 
 #### More Workshops
 
+* [Amazon EKS Workshop](https://eksworkshop.com) - This workshop guides you through the process of setting up and using a Kubernetes cluster on AWS
 * [Amazon ECS Workshop](https://ecsworkshop.com) - Learn how to use Stelligent Mu to deploy a microservice architecture that runs in AWS Fargate
 * [Amazon Lightsail Workshop](https://lightsailworkshop.com) - If you are getting started with the cloud and looking for a way to run an extremely low cost environment Lightsail is perfect. Learn how to deploy to Amazon Lightsail with this workshop.
 
-#### Tools for AWS Fargate and Amazon ECS
+#### Tools for AWS Sagemaker 
 
 * [Containers on AWS](https://containersonaws.com/) - Learn common best-practices for running containers on AWS
 - [fargate](http://somanymachines.com/fargate/) - Command line tool for interacting with AWS Fargate. With just a single command you can build, push, and launch your container in Fargate, orchestrated by ECS.
