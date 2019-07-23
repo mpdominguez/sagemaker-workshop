@@ -1,24 +1,21 @@
 ---
-title: "Introduction"
+title: "Sagemaker and Step Functions"
 weight: 5
 chapter: true
 draft: false
 ---
 
-# Introduction to Kubernetes
+# Sagemaker and Step Functions 
 
-A walkthrough of basic Kubernetes concepts.
+In this workshop you will explore the development cycle of machine learning model on AWS. In the first part, you will find a sample project fully developed in an ml.m4.4xlarge SageMaker notebook instance. On purpose, the notebooks are divided in different stages
 
-![Title Image](/images/introduction/eks-product-page.png)
+* Exploratory analysis
+* ETL to prepare training data
+* Training the model with Hyperparameter Optimization
+* Putting "new data" through a preprocessing pipeline to get it ready for prediction
+* Batch predictions for new data
 
-Welcome to the Amazon EKS Workshop!
+In the second part of this workshop we will implement this project in production automatizing it's execution using a combination of CloudWatch, Step Functions, Lambda, Glue and SageMaker.
 
-The intent of this workshop is to educate users about the features of Amazon EKS.
+![Title Image](/images/introduction/steps.png)
 
-Background in EKS, Kubernetes, Docker, and container workflows are not required, but they are recommended.
-
-This chapter will introduce you to the basic workings of Kubernetes, laying the foundation for the hands-on portion of the workshop.
-
-Specifically, we will walk you through the following topics:
-
-{{% children showhidden="false" %}}
