@@ -1,5 +1,5 @@
 ---
-title: "Sagemaker and Step Functions"
+title: "Introduction"
 weight: 5
 chapter: true
 draft: false
@@ -18,4 +18,3 @@ In this workshop you will explore the development cycle of machine learning mode
 In the second part of this workshop we will implement this project in production automatizing it's execution using a combination of CloudWatch, Step Functions, Lambda, Glue and SageMaker.
 
 ![Title Image](/images/introduction/steps.png)
-

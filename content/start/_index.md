@@ -5,9 +5,12 @@ weight: 10
 ---
 
 # Getting Started
-To start the workshop, follow one of the following depending on whether you are...
+To start the workshop, let's create a Jupyter Notebook in Sagemaker and clone the repos to it in order to continue with the first part:
 
-* ...[running the workshop on your own](self_paced/), or
-* ...[attending an AWS hosted event](aws_event/)
+* Exploratory analysis
+* ETL to prepare training data
+* Training the model with Hyperparameter Optimization
+* Putting “new data” through a preprocessing pipeline to get it ready for prediction
+* Batch predictions for new data
 
-Once you have completed with either setup, continue with [**Create a SSH key section**](/prerequisites/sshkey/)
+
