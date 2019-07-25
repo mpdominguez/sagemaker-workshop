@@ -17,7 +17,7 @@ From wherever you checkout repos:
 `git clone git@github.com:mpdominguez/sagemaker-workshop.git` (or your fork)
 
 #### Clone the theme submodule:
-`cd sagemaker-workshop
+`cd sagemaker-workshop`
 
 `git submodule init` ;
 `git submodule update`
