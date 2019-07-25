@@ -4,17 +4,29 @@ chapter: false
 weight: 12 
 ---
 
-Now we are going to create a GLUE ETL job in python 3.6. In this job we can combine both the ETL from Notebook #2 and the Preprocessing Pipeline from Notebook #4.
+Now we are going to create a GLUE ETL job in python 3.6. 
+In this job, we can combine both the ETL from Notebook #2 and the Preprocessing Pipeline from Notebook #4.
 
-Note that instead of reading from a csv file we are going to use Athena to read from the resulting tables of the Glue Crawler.
+Note that, instead of reading from a csv file, we are going to use Athena to read from the resulting tables of the Glue Crawler.
 
-Glue is a "serverless" service so the processing power assigned to the process is meassured in DPUs. Each DPU is equivalent to 16GB of RAM and 4vCPU.
+Glue is a serverless service so the processing power assigned  is meassured in (Data Processing Units) DPUs. Each DPU is equivalent to 16GB of RAM and 4vCPU.
 
 * Open the AWS Console
 * Under Services go to AWS Glue
-* Uner Jobs, add new job
-    * Name: etlandpipeline, Role: Glueadmin, Type Python Shell, Python3, Select A New Script Authored By you, Under Security Configuration... Select Python library path and browse to the location where you have the egg of the aws wrangler Library, Under Maximum Capacity write 1. Then hit "Save Job and Edit Script"
-* In the Script tab copy and paste the following script adapted to Glue from the previous notebooks. ALWAYS REMEMBER TO ADAPT YOUR ROLE ARN AND BUCKET
+* Or follow this link https://us-east-1.console.aws.amazon.com/glue/home?region=us-east-1#etl:tab=jobs 
+* Under Jobs, add new job
+    * Name: etlandpipeline
+    * Role: Create a role named Glueadmin with AdministratorAccess (this is because we are testing)
+    * Type: Python Shell
+    * Glue version: Python3 (Glue Version 1.0)
+    * Select A New Script Authored By you
+    * Under Security Configuration, Select Python library path and browse to the location where you have the egg of the aws wrangler Library (your bucket in thr folder python)
+    * Under Maximum Capacity: 1  - Next
+    * Then hit "Save Job and Edit Script"
+
+* In the Script tab copy and paste the following script adapted to Glue from the previous notebooks. 
+
+__Remember to modify the bucket to yours. Bucket: Line 18__
 
 ```
 import pandas as pd
@@ -296,7 +308,8 @@ df_to_predict_feats = df_to_predict[['mean-last-30', 'mean-last-7', 'std-last-30
        'weekday_0', 'weekday_1', 'weekday_2', 'weekday_3', 'weekday_4',
        'weekday_5', 'weekday_6']]
 
-write_dataframe_to_csv_on_s3(df_to_predict_feats,bucket,'to_predict.csv)
-write_dataframe_to_csv_on_s3(df_to_predict[['id_reseller']],bucket,'id_reseller_to_predict.csv)
+write_dataframe_to_csv_on_s3(df_to_predict_feats,bucket,'to_predict.csv')
+write_dataframe_to_csv_on_s3(df_to_predict[['id_reseller']],bucket,'id_reseller_to_predict.csv')
 
 ```
+* Hit Save and Run job, no Parameters.

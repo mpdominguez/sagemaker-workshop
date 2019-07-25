@@ -4,20 +4,27 @@ chapter: false
 weight: 16
 ---
 
-4.3 Await Train Model Lambda
 1. Go to the AWS Console and under Services, select Lambda
 2. Go to the Functions Pane and select Create Function
 3. Author from scratch
-4. Name it lambdaModelAwait, choose runtime Python 3.6 and as executing role, select the role you created in the previous step
-This lambda function, now receives the output of the previous step and allows us to check if the process is done or not. If it's done, it returns the name of the best training job.
+4. Or follow this link https://console.aws.amazon.com/lambda/home?region=us-east-1#/create?firstrun=true
+5. Parameters for the function:
+    * Name: lambdaModelAwait
+    * Runtime: Python 3.6
+    * Executing role: Use an existing role and select the role you created in the previous step (workshop-role) - Create function
 
-Previous response (we can use it in the test event):
+This lambda function, now receives the output of the previous step and allows us to check if the process is done or not. 
+If it's done, it returns the name of the best training job.
+
+The name of the training job can be found here:  https://us-east-1.console.aws.amazon.com/sagemaker/home?region=us-east-1#/hyper-tuning-jobs
+
+Previous response (for using in the test event):
 ```
     {
       "container": "811284229777.dkr.ecr.us-east-1.amazonaws.com/xgboost:latest",
       "stage": "Training",
       "status": "InProgress",
-      "name": "invoice-forecast20190702190151"
+      "name": "invoice-forecast11111111111111"
     }
 ```
 In the code editor paste the following code:

@@ -4,15 +4,27 @@ chapter: false
 weight: 16
 ---
 
-4.4 Deploy Model In SageMaker Lambda
+Deploy Model In SageMaker: Lambda Function
+
 In this lambda function, we are going to need to use the best training job from the previous step to deploy a predictor.
+
+1. Go to the AWS Console and under Services, select Lambda
+2. Go to the Functions Pane and select Create Function
+3. Author from scratch
+4. Or follow this link https://console.aws.amazon.com/lambda/home?region=us-east-1#/create?firstrun=true
+5. Parameters for the function:
+    * Name: lambdaModelDeploy
+    * Runtime: Python 3.6
+    * Executing role: Use an existing role and select the role you created in the previous step (workshop-role) - Create function
+
+The ARN for the variable EXECUTION_ROLE can be found here: https://console.aws.amazon.com/iam/home?region=us-east-1#/roles/workshop-role
 
 ```
 import boto3
 import os
 
 sagemaker = boto3.client('sagemaker')
-EXECUTION_ROLE = 'arn:aws:iam::452432741922:role/service-role/AmazonSageMaker-ExecutionRole-20181022T121720'
+EXECUTION_ROLE = 'arn:aws:iam::1111111111112:role/service-role/AmazonSageMaker-ExecutionRole-111111111111'
 INSTANCE_TYPE = 'ml.m4.xlarge'
 container = '811284229777.dkr.ecr.us-east-1.amazonaws.com/xgboost:latest'
 
@@ -95,7 +107,11 @@ def create_endpoint(endpoint_name, config_name):
         print('Unable to create endpoint.')
         raise(e)
 ```
+
+
 On your SageMaker console you should see an endpoint with status creating. Once you test the output it should look like this:
+You can configure the test with this parameters, taking care of changing the parameters __name__ , __model_data_url__ and __best_training_job__ received in the output of the test of lambdaModelAwait
+
 ```
 {
   "container": "811284229777.dkr.ecr.us-east-1.amazonaws.com/xgboost:latest",
@@ -121,6 +137,8 @@ Response:
   "best_training_job": "invoice-forecast20190702190151-005-dde9844e"
 }
 ```
+And you can check the progress in the AWS Console: https://us-east-1.console.aws.amazon.com/sagemaker/home?region=us-east-1#/endpoints
+
 After the model is in service you should see something like this:
 
 ```

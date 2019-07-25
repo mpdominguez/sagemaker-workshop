@@ -7,8 +7,22 @@ weight: 15
 1. Go to the AWS Console and under Services, select Lambda
 * Go to the Functions Pane and select Create Function
 * Author from scratch
-* Name it lambdaModelTrain, choose runtime Python 3.6 and as executing role, select the role you created in the previous step
-This lambda function doesn't need to receive any parameters, but it should return the resulting hyperparameter tunning optimization job name, that we will use in the next lambda function to check status, the container it used and that the status is now In Progress...
+* Or follow this link https://console.aws.amazon.com/lambda/home?region=us-east-1#/create?firstrun=true
+* Parameters for the function:
+    * Name: lambdaModelTrain
+    * Runtime Python 3.6 
+    * Executing role: Use an existing role and select the role you created in the previous step (workshop-role) - Create function
+
+This lambda function doesn't need to receive any parameters, but it should return the resulting hyperparameter tunning optimization job name.
+
+We will use that job name in the next lambda function to check status, the container it used and that the status is now "In Progress".
+
+Let's copy this code into the editor.
+
+Take special care of:
+
+* Line 9: role (the Role ARN of workshop-role, also in this link https://console.aws.amazon.com/iam/home?region=us-east-1#/roles/workshop-role) 
+* Line 12: bucket_path (your bucket for the results) 
 
 ```
 import json
@@ -19,10 +33,10 @@ from time import gmtime, strftime
 
 region = boto3.Session().region_name    
 smclient = boto3.Session().client('sagemaker')
-role = 'arn:aws:iam::452432741922:role/service-role/AmazonSageMaker-ExecutionRole-20181022T121720'
+role = 'arn:aws:iam::1111111111:role/role/workshop-role'
 
 
-bucket_path='s3://blackb-mggaska-implementation'
+bucket_path='s3://bucket-name'
 prefix = "invoice-forecast"
 
 container = '811284229777.dkr.ecr.us-east-1.amazonaws.com/xgboost:latest'
@@ -136,7 +150,12 @@ def lambda_handler(event, context):
     return event
 ```
 
+* Hit Save
+
 Test the lambda function
+
 Create a test event with no parameters save and test. In your AWS console under SageMaker>Hyperparamter tunning jobs you should see the HPO runnning.
+
+https://us-east-1.console.aws.amazon.com/sagemaker/home?region=us-east-1#/hyper-tuning-jobs
 
 

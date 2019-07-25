@@ -1,5 +1,5 @@
 ---
-title: "Start the workshop..."
+title: "SageMaker"
 chapter: true
 weight: 10
 ---

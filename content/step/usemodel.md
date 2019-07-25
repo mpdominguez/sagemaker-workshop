@@ -4,9 +4,20 @@ chapter: false
 weight: 17
 ---
 
-4.5 Use model to predict
-Now we are going to use the deployed model to predict. 
+In this lambda function,  we are going to use the deployed model to predict. 
+
+ 1. Go to the AWS Console and under Services, select Lambda
+ 2. Go to the Functions Pane and select Create Function
+ 3. Author from scratch
+ 4. Or follow this link https://console.aws.amazon.com/lambda/home?region=us-east-1#/create?firstrun=true
+ 5. Parameters for the function:
+     * Name: lambdaModelPredict
+     * Runtime: Python 3.6
+     * Executing role: Use an existing role and select the role you created in the previous step (workshop-role) - Create function
+
 This last lambda function doesn't take any parameters, but in this case we need to touch the default parameters of the lambda to configure Max Memory in 1024 MB and Timeout in 15 Mins.
+
+__Change the variable bucket for your bucket name__
 ```
 import os
 import io
@@ -20,7 +31,6 @@ ENDPOINT_NAME = 'demobb-invoice-prediction'
 runtime= boto3.client('runtime.sagemaker')
 bucket = 'blackb-mggaska-implementation'
 s3 = boto3.client('s3')
-bucket ='blackb-mggaska-implementation'
 key = 'to_predict.csv'
 def lambda_handler(event, context):
     response = s3.get_object(Bucket=bucket, Key=key)

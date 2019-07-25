@@ -1,5 +1,5 @@
 ---
-title: "Create Step Function"
+title: "Schedule the State Machine"
 chapter: false
 weight: 18
 ---
