@@ -7,11 +7,13 @@ Now we have to create a step function to orchestrate the execution of all the pr
 
 Follow this link: https://console.aws.amazon.com/states/home?region=us-east-1#/statemachines/create 
 
-For step function we use the ASL markup language.
 
 This is the resulting diagram:
 
 ![STEPFUNCTIONS](/images/steps.png)
+
+For step function we use the ASL markup language.
+We have to change all the arn from 1111111111111 to our account number.
 
 ```
 {
@@ -27,13 +29,13 @@ This is the resulting diagram:
       },
       "StartTrainingJob": {
               "Type": "Task",
-              "Resource": "arn:aws:lambda:us-east-1:452432741922:function:lambdaModelTrain",
+              "Resource": "arn:aws:lambda:us-east-1:1111111111111:function:lambdaModelTrain",
               "ResultPath": "$",
               "Next": "CheckStatusTraining"
             },
             "CheckStatusTraining": {
               "Type": "Task",
-              "Resource": "arn:aws:lambda:us-east-1:452432741922:function:lambdaModelAwait",
+              "Resource": "arn:aws:lambda:us-east-1:1111111111111:function:lambdaModelAwait",
               "ResultPath": "$",
               "Next": "CheckTrainingBranch"
             },
@@ -67,12 +69,12 @@ This is the resulting diagram:
 
             "StartDeployment": {
               "Type": "Task",
-              "Resource": "arn:aws:lambda:us-east-1:452432741922:function:lambdaModelDeploy",
+              "Resource": "arn:aws:lambda:us-east-1:1111111111111:function:lambdaModelDeploy",
               "Next": "CheckStatusDeployment"
             },
             "CheckStatusDeployment": {
               "Type": "Task",
-              "Resource": "arn:aws:lambda:us-east-1:452432741922:function:lambdaModelAwait",
+              "Resource": "arn:aws:lambda:us-east-1:1111111111111:function:lambdaModelAwait",
               "ResultPath": "$",
               "Next": "CheckDeploymentBranch"
             },
@@ -105,7 +107,7 @@ This is the resulting diagram:
             },
             "StartPrediction": {
               "Type": "Task",
-              "Resource": "arn:aws:lambda:us-east-1:452432741922:function:lambdaModelPredict",
+              "Resource": "arn:aws:lambda:us-east-1:1111111111111:function:lambdaModelPredict",
               "End": true
             }
           }
