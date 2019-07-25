@@ -56,5 +56,7 @@ def lambda_handler(event, context):
 
 
     event['status'] = 'Processed records ' + str(len(results))
+    # Deleting Endpoint
+    runtime.delete_endpoint(EndpointName=ENDPOINT_NAME)
     return event
 ```
