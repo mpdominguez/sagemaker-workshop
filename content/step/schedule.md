@@ -10,8 +10,9 @@ We are going to use Cloudwacth Event Rules  to create a scheduled task in order 
 Follow this link:  https://console.aws.amazon.com/cloudwatch/home?region=us-east-1#rules:action=create
 
 And we fill the form like this:
+
 * Event Source: Schedule
-* Cron expression: 0 10 * * ? * (every day at 10 AM UTC)
+* Cron expression: ``` 0 10 * * ? * ``` (every day at 10 AM UTC)
 * Targets: Step Functions state machine
     * State machine: the name of your state machine
     * Create a new role for this specific resource - Configure details

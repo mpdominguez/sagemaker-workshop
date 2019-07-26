@@ -27,6 +27,7 @@ import csv
 from io import StringIO
 
 # grab static variables
+sagemaker = boto3.client('sagemaker')
 ENDPOINT_NAME = 'demobb-invoice-prediction'
 runtime= boto3.client('runtime.sagemaker')
 bucket = 'blackb-mggaska-implementation'
@@ -57,6 +58,6 @@ def lambda_handler(event, context):
 
     event['status'] = 'Processed records ' + str(len(results))
     # Deleting Endpoint
-    runtime.delete_endpoint(EndpointName=ENDPOINT_NAME)
+    sagemaker.delete_endpoint(EndpointName=ENDPOINT_NAME)
     return event
 ```

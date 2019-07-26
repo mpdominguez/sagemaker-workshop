@@ -16,17 +16,7 @@ weight: 16
 This lambda function, now receives the output of the previous step and allows us to check if the process is done or not. 
 If it's done, it returns the name of the best training job.
 
-The name of the training job can be found here:  https://us-east-1.console.aws.amazon.com/sagemaker/home?region=us-east-1#/hyper-tuning-jobs
 
-Previous response (for using in the test event):
-```
-    {
-      "container": "811284229777.dkr.ecr.us-east-1.amazonaws.com/xgboost:latest",
-      "stage": "Training",
-      "status": "InProgress",
-      "name": "invoice-forecast11111111111111"
-    }
-```
 In the code editor paste the following code:
 
 ```
@@ -103,7 +93,22 @@ def describe_endpoint(name):
         raise(e)
     return response
 ```
+
+Previous response (for using in the test event):
+
+The name of the training job can be found here:  https://us-east-1.console.aws.amazon.com/sagemaker/home?region=us-east-1#/hyper-tuning-jobs
+
+```
+    {
+      "container": "811284229777.dkr.ecr.us-east-1.amazonaws.com/xgboost:latest",
+      "stage": "Training",
+      "status": "InProgress",
+      "name": "invoice-forecast11111111111111"
+    }
+```
+
 First, you will see a response like
+
 ```
 Response:
 {
