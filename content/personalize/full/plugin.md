@@ -7,9 +7,10 @@ weight: 7
 
 The application uses the Django Administration feature to define models that are available to the application. This allows multiple models of different types to be configured, and injected or removed from the application at any time. There are three modes of operation of the application:
 
-Recommendations - standard recommendations, allowing different 2 models to be compared at once
-Personal Ranking - re-ranks popular films in a genre, with a single model on-screen at once
-Similar Items - shows items similar to others, with a single model on-screen at once. You can optionally send this list through a Personal Ranking model if you have one definedA
+- Recommendations - standard recommendations, allowing different 2 models to be compared at once
+- Personal Ranking - re-ranks popular films in a genre, with a single model on-screen at once
+- Similar Items - shows items similar to others, with a single model on-screen at once. You can optionally send this list through a Personal Ranking model if you have one definedA
+
 Each of these modes allows multiple models of their type to be used, but each mode can only show one or two different models simultaneously - however, you can choose any configured model at any time.
 
 By default the admin user within Django does not exist - you need to create one. But in this case we already created one admin user for this workshop. 
@@ -22,13 +23,13 @@ Login to the Django Administration site. This is at the same URL as the main app
 
 ![djangoAdmin](/images/djangoAdmin.png)
 
-This brings up the Site Administration screen, which show entries for Groups and Users (which we don't need), but also a section called Recommend where you can add Personalize models to the app. Click on +Add link to begin to add a new model
+This brings up the Site Administration screen, which show entries for Groups and Users (which we don't need), but also a section called Recommend where you can add Personalize models to the app. Click on ***+Add*** link to begin to add a new model
 
-Back on the AWS Console, go to the Amazon Personalize service console, select the personalize-recs-dataset-group and then on the left-hand menu click Campaigns. This will show your personalize-lab-recs-campaign, along with the campaigns for the other two solutions if you've created them. If you've created all three then you should see something like this, but for your other two campaigns may already have been created
+Back on the AWS Console, go to the Amazon Personalize service console, select the ***personalize-recs-dataset-group*** and then on the left-hand menu click ***Campaigns***. This will show your ***personalize-lab-recs-campaign***, along with the campaigns for the other two solutions if you've created them. If you've created all three then you should see something like this, but for your other two campaigns may already have been created
 
 ![campaignList](/images/campaignList.png)
 
-Click on the personalize-lab-recs-campaign and you'll see the Campaign ARN - copy this, and head back to the admin screen. Enter Personal Recommendations for the model name, enter the ARN where it asks, ensure that the Model type is set for recommendations and set the Model sort order to 1. Click on SAVE to save the definition.
+Click on the ***personalize-lab-recs-campaign*** and you'll see the Campaign ARN - copy this, and head back to the admin screen. Enter ***Personal Recommendations*** for the model name, enter the ***ARN*** where it asks, ensure that the Model type is set for ***recommendations*** and set the Model sort order to ***1***. Click on ***SAVE*** to save the definition.
 
 ![djangoAddModel](/images/djangoAddModel.png)
 
@@ -36,7 +37,7 @@ The application will use the sort order field to decide how to order models in t
 
 If you also have a SIMS or Personal Ranking campaign then go ahead and add them now in the same way - if they haven't yet completed then you can come back and add them later. You can then close the admin screen and head back to the main application web page
 
-The main screen now shows the three models (or maybe just one) that we've built - it lists the precision metrics for each one, and as you add or remove models from the Django Administration page the changes will be reflected here. Now click on the Select Random User button
+The main screen now shows the three models (or maybe just one) that we've built - it lists the precision metrics for each one, and as you add or remove models from the Django Administration page the changes will be reflected here. Now click on the ***Select Random User*** button
 
 ![appFrontScreenWithModels](/images/appFrontScreenWithModels.png)
 
