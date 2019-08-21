@@ -6,18 +6,7 @@ weight: 6
 ## Running the Video Recommendation App 
 
 You are now ready to run the application server! Simply execute the runmyserver script, and you should see status messages appearing quickly - these initial ones are the Load Balancer health-checks, and after a minute or so the instance should be declared healthy by the Load Balancer Target Group. Note, you will see some warnings around the psycopg2 component, but this can be ignored.
-```
-$ ./runmyserver
 
-System check identified no issues (0 silenced).
-May 06, 2019 - 14:53:03
-Django version 1.11.18, using settings 'videorecs.settings'
-Starting development server at http://10.192.11.223:8000/
-Quit the server with CONTROL-C.
-[06/May/2019 14:53:14] "GET /recommend/ HTTP/1.1" 200 2893
-[06/May/2019 14:53:32] "GET /recommend/ HTTP/1.1" 200 2893
-[06/May/2019 14:53:44] "GET /recommend/ HTTP/1.1" 200 2893
-```
 The URL of the server is your ALB followed by the /recommend/ path, although there is also an /admin/ path configured that we'll use later. For now connect to your server - in my example the server can be found at http://TestS-Appli-ADS60FMCKPMG-1862985075.us-east-1.elb.amazonaws.com/recommend
 
 You should see the following screen in your browser - no Model Precision Metrics are available, as we haven't added any models yet to the application. You can also see that documentation for this is present, but be aware that it may not be 100% up to date with coding changes on the demo.

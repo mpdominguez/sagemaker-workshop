@@ -12,16 +12,11 @@ Personal Ranking - re-ranks popular films in a genre, with a single model on-scr
 Similar Items - shows items similar to others, with a single model on-screen at once. You can optionally send this list through a Personal Ranking model if you have one definedA
 Each of these modes allows multiple models of their type to be used, but each mode can only show one or two different models simultaneously - however, you can choose any configured model at any time.
 
-By default the admin user within Django does not exist - you need to create one. In your SSH session, ensure that the web server is running again, and then create a second SSH session. In that session, create the first superuser using the following commands. Please note down your username and password, as no-one will be able to retrieve it for you; in the Lab we suggest using admin and DoNotH@ckMe accordingly, but use any email address you like. You can then close the second SSH session
+By default the admin user within Django does not exist - you need to create one. But in this case we already created one admin user for this workshop. 
 ```
-$ cd ~/personalize-video-recs/videorecs/
-$ python manage.py createsuperuser
-
-Username (leave blank to use 'ec2-user'): admin
-Email address: anyone@email.com
-Password:
-Password (again):
-Superuser created successfully.
+username admin
+password DoNotH@ckMe
+email anyone@email.com
 ```
 Login to the Django Administration site. This is at the same URL as the main application, but replace /recommend with /admin at the end of the URL. This will bring up the following screen, so login now with the credentials that you just created
 
