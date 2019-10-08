@@ -70,8 +70,8 @@ def write_dataframe_to_csv_on_s3(dataframe, bucket, filename):
 #--------------------------------------------------
 # ### Filter the last 4 months of data
 
-today = date.today()
-min_date = today - pd.to_timedelta(120, unit='d')
+max_date = df['date'].max()
+min_date = max_date - pd.to_timedelta(120, unit='d')
 
 df = df[df['date'] > min_date]
 
