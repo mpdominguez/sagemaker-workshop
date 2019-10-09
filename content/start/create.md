@@ -12,7 +12,7 @@ We'll give a name to the notebook instance and in "Notebook instance type" we'll
 
 * ml.m4.4xlarge
 
-Create an IAM role with access to any s3 bucket
+Create an IAM role with access to any s3 bucket and Athena Full Access
 
 The rest of the data, let's leave it by default and click "Create notebook instance".
 

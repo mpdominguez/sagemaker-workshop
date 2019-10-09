@@ -7,9 +7,8 @@ Now, let's open a Terminal in our notebook by going to "New/Terminal" and perfor
 
 ```
 cd ~/SageMaker
-git clone https://github.com/githubmg/sagemaker-step-functions 
-mv sagemaker-step-functions/pure-sagemaker-workshop/ ~/SageMaker/1-pure-sagemaker-workshop
-mv sagemaker-step-functions/implementation-with-step-func/ ~/SageMaker/2-implementation-with-step-functions
+git clone https://github.com/githubmg/buildon-workshop
+mv buildon-workshop/pure-sagemaker-workshop/ ~/SageMaker/1-pure-sagemaker-workshop
 rm -rf ~/SageMaker/sagemaker-step-functions/
 ```
 If we reload the Notebook, we'll see a new folder called "1-pure-sagemaker-workshop"
