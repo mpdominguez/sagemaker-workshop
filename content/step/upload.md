@@ -12,8 +12,8 @@ We can execute this on the console of the Jupyter Notebook or we can just execut
 Your Bucket Name
 ```
 your_bucket = 'sales-prediction-mrtdom'
-!wget https://ml-lab-mggaska.s3.amazonaws.com/sales-forecast/billing_sm.csv
-!wget https://ml-lab-mggaska.s3.amazonaws.com/sales-forecast/reseller_sm.csv
+!wget https://ml-lab-mggaska.s3.amazonaws.com/sales-forecast/billing/billing_sm.csv
+!wget https://ml-lab-mggaska.s3.amazonaws.com/sales-forecast/reseller/reseller_sm.csv
 !wget https://ml-lab-mggaska.s3.amazonaws.com/sales-forecast/awswrangler-0.0b2-py3.6.egg
 ```
 
