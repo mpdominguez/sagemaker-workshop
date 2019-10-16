@@ -14,7 +14,7 @@ On Linux:
 
 #### Clone this repo:
 From wherever you checkout repos:
-`git clone git@github.com:mpdominguez/sagemaker-workshop.git` (or your fork)
+`git clone git@github.com:githubmg/sagemaker-workshop.git` (or your fork)
 
 #### Clone the theme submodule:
 `cd sagemaker-workshop`
@@ -47,5 +47,5 @@ As you save edits to a page, the site will live-reload to show your changes.
 Any commits to master will auto build and deploy in a couple of minutes. You can see the currently
 deployed hash at the bottom of the menu panel.
 
-note: shift-reload may be necessary in your browser to reflect the latest changes.
+note: shift-reload may be necessary in your browser to reflect the latest changes. 
 
