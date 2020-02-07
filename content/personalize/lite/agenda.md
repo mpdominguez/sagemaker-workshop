@@ -19,4 +19,6 @@ HRNN-Metadata - Similar to the HRNN recipe with additional features derived from
 HRNN-Coldstart - Similar to the HRNN-Metadata recipe, while adding personalized exploration of new items. Use this recipe when you are frequently adding new items to the Items dataset and require the items to immediately appear in the recommendations.
 Popularity-Count - Popularity-count returns the top popular items from a dataset. A popular item is defined by the number of times it occurs in the dataset. The recipe returns the same popular items for all users.
 
-Personlized-Ranking - Provides a user with a ranked list of items.SIMS - Leverages user-item interaction data to recommend items similar to a given item. In the absence of sufficient user behavior data for an item, this recipe recommends popular items.
+Personalized-Ranking - Provides a user with a ranked list of items.
+
+SIMS - Leverages user-item interaction data to recommend items similar to a given item. In the absence of sufficient user behavior data for an item, this recipe recommends popular items.
