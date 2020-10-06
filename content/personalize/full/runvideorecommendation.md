@@ -5,7 +5,17 @@ weight: 6
 ---
 ## Running the Video Recommendation App 
 
-You are now ready to run the application server! Simply execute the runmyserver script, and you should see status messages appearing quickly - these initial ones are the Load Balancer health-checks, and after a minute or so the instance should be declared healthy by the Load Balancer Target Group. Note, you will see some warnings around the psycopg2 component, but this can be ignored.
+You are now ready to run the application server! Simply follow the steps below to run the runmyserver script, and you should see status messages appearing quickly - these initial ones are the Load Balancer health-checks, and after a minute or so the instance should be declared healthy by the Load Balancer Target Group. Note, you will see some warnings around the psycopg2 component, but this can be ignored.
+
+_Steps to execute the runmyserver script_
+
+1. Go to the console, to EC2 services and click on instances to find out the public DNS of the EC2 instance created by CF
+2. SSH , using the key created at lab start, to the EC2 instance 
+3. Became "root" to move to the app location
+4. Change dir to /root/personalize-video-recs/videorecs/
+5. Execute runmyserver
+
+![appFrontScreen](/images/runMyServer.png)
 
 The URL of the server is your ALB followed by the /recommend/ path, although there is also an /admin/ path configured that we'll use later. For now connect to your server - in my example the server can be found at http://TestS-Appli-ADS60FMCKPMG-1862985075.us-east-1.elb.amazonaws.com/recommend
 
