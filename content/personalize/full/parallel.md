@@ -13,15 +13,15 @@ The left-hand side, which will show you the solution that you're currently creat
 
 ![solutionList](/images/solutionList.png)
 
-Enter a suitable name for this solution, such as **similar-items-solutions**, select ***Manual*** recipe selection, then choose the ***aws-sims*** recipe and click Next - we don't need to change anything in the advanced configuration section
+Enter a suitable name for this solution, such as **similar-items-solutions** and choose the ***aws-sims*** recipe and click Next - we don't need to change anything in the advanced configuration section
 
 ![solutionConfig](/images/solutionConfig.png)
 
-In the following screen just hit the ***Finish*** button and a new solution version will start to be created.
+In the "Solutions overview" screen just hit the ***Finish*** button and a new solution version will start to be created.
 
 ### Create Personal Ranking Solution
 
-Let's do exactly the same thing again, but this time we'll create a ranking solition. From the Solutions and Recipes screen that you are on, click Create solution, give it a name like ***rankings-solution***, ensure it's a ***Manual*** recipe selection but this time select the ***aws-personalized-ranking*** recipe. Click ***Next*** and ***Finished*** as before.
+Let's do exactly the same thing again, but this time we'll create a ranking solition. From the Solutions and Recipes screen that you are on, click Create solution, give it a name like ***rankings-solution*** but this time select the ***aws-personalized-ranking*** recipe. Click ***Next*** and ***Finished*** as before.
 
 ![recipeRanking](/images/recipeRanking.png)
 
