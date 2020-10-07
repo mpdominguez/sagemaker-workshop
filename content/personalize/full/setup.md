@@ -8,6 +8,8 @@ Click on Amazon SageMaker from the list of all services by entering Sagemaker in
 
 ![consoleSMSelect](/images/consoleSMSelect.png)
 
+Go to the SageMaker menu on the left and choose "Notebook instances" under the "Notebook" option.
+
 Wait until the notebook instance status is InService, then click on Open Jupyter - whilst you're waiting you can perform step #1 of the next section to copy some files from Git
 
 ![openNotebook](/images/openNotebook.png)
