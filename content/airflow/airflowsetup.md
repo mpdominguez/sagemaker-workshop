@@ -17,8 +17,11 @@ The stack includes the following:
 The prerequisite for running this CloudFormation script is to set up an Amazon EC2 Key Pair to log in to manage Airflow, for example, if you want to troubleshoot or add custom operators.
 
 [Airflow 1.10.12 RDS](https://console.aws.amazon.com/cloudformation/home?region=us-west-2#/stacks/new?stackName=airflow-sagemaker&templateURL=https://s3.amazonaws.com/aws-machine-learning-blog/artifacts/sagemaker-ml-workflow-with-apache-airflow/v1/cfn/airflow-ec2-1.10.12-RDS.yaml)
+
 [Airflow 1.10.12 Aurora Serverless](https://console.aws.amazon.com/cloudformation/home?region=us-west-2#/stacks/new?stackName=airflow-sagemaker&templateURL=https://s3.amazonaws.com/aws-machine-learning-blog/artifacts/sagemaker-ml-workflow-with-apache-airflow/v1/cfn/airflow-ec2-1.10.12-Aurora-Serverless.yaml)
+
 [Airflow 2.0.2 RDS](https://console.aws.amazon.com/cloudformation/home?region=us-west-2#/stacks/new?stackName=airflow-sagemaker&templateURL=https://s3.amazonaws.com/aws-machine-learning-blog/artifacts/sagemaker-ml-workflow-with-apache-airflow/v1/cfn/airflow-ec2-2.0.2-RDS.yaml)
+
 [Airflow 2.0.2 Aurora Serverless](https://console.aws.amazon.com/cloudformation/home?region=us-west-2#/stacks/new?stackName=airflow-sagemaker&templateURL=https://s3.amazonaws.com/aws-machine-learning-blog/artifacts/sagemaker-ml-workflow-with-apache-airflow/v1/cfn/airflow-ec2-2.0.2-Aurora-Serverless.yaml)
 
 It might take up to 10 minutes for the CloudFormation stack to create the resources. After the resource creation is completed, you should be able to log in to Airflow web UI. The Airflow web server runs on port 8080 by default. To open the Airflow web UI, open any browser, and type in the URL here http://ec2-public-dns-name:8080. The public DNS name of the EC2 instance can be found on the Outputs tab of CloudFormation stack on the AWS CloudFormation console.
