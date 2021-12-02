@@ -11,10 +11,10 @@ We can execute this on the console of the Jupyter Notebook or we can just execut
 ### Download the data
 Your Bucket Name
 ```
-your_bucket = 'sales-prediction-mrtdom'
-!wget https://ml-lab-mggaska.s3.amazonaws.com/billing_sm.csv
-!wget https://ml-lab-mggaska.s3.amazonaws.com/reseller_sm.csv
-!wget https://ml-lab-mggaska.s3.amazonaws.com/awswrangler-1.9.6-py3.6.egg
+your_bucket = '<YOUR BUCKET NAME e.g., my-sagemaker-bucket>'
+!wget https://github.com/mpdominguez/sagemaker-workshop/blob/master/assets/awswrangler-1.9.6-py3.6.egg
+!wget https://github.com/mpdominguez/sagemaker-workshop/blob/master/assets/reseller_sm.csv
+!wget https://github.com/mpdominguez/sagemaker-workshop/blob/master/assets/billing_sm.csv
 ```
 
 Now we upload the data to an S3 location
@@ -22,7 +22,5 @@ Now we upload the data to an S3 location
 import boto3, os
 boto3.Session().resource('s3').Bucket(your_bucket).Object(os.path.join('billing', 'billing_sm.csv')).upload_file('billing_sm.csv')
 boto3.Session().resource('s3').Bucket(your_bucket).Object(os.path.join('reseller', 'reseller_sm.csv')).upload_file('reseller_sm.csv')
-boto3.Session().resource('s3').Bucket(your_bucket).Object(os.path.join('python', 'awswrangler-0.0b2-py3.6.egg')).upload_file('awswrangler-0.0b2-py3.6.egg')
+boto3.Session().resource('s3').Bucket(your_bucket).Object(os.path.join('python', 'awswrangler-1.9.6-py3.6.egg')).upload_file('awswrangler-1.9.6-py3.6.egg')
 ```
-
-
