@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Full Version on Amazon SageMaker Workshop</title>
+    <link>/personalize/full.html</link>
+    <description>Recent content in Full Version on Amazon SageMaker Workshop</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="/personalize/full/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Overview</title>
+      <link>/personalize/full/overview.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/personalize/full/overview.html</guid>
+      <description>This lab will walk you through the following:
+Deploy and configure a Video Recommendation application Setting up a Jupyter Notebook environment for the Amazon Personalize Service Preview Downloading and preparing training data, based on the Movie Lens data set Importing prepared data into Amazon Personalize Building an ML model based upon the Hierarchical Recurrent Neural Network algorithm (HRNN) Testing your model by deploying an Amazon Personalize campaign Adding your campaign to Video Recommendation application </description>
+    </item>
+    
+    <item>
+      <title>Deploy the App</title>
+      <link>/personalize/full/deploy.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/personalize/full/deploy.html</guid>
+      <description>Deploy the &amp;ldquo;Video Recommendation&amp;rdquo; Application Whilst this application could be deployed anywhere, it uses both an EC2 Amazon Machine Image (AMI) and RDS Snapshot that have been stored in the North Virgina Region of AWS (us-east-1). Hence, please make sure that the Region selected in the AWS Console is alway US East (N.Virginia), as shown in the following diagram. The workshop will only function correctly if the EC2 configuration, CloudFormation template executiion and SageMaker notebook are all using this AWS Region.</description>
+    </item>
+    
+    <item>
+      <title>Setup your Jupyter Notebook</title>
+      <link>/personalize/full/setup.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/personalize/full/setup.html</guid>
+      <description>Click on Amazon SageMaker from the list of all services by entering Sagemaker into the Find services box. This will bring you to the Amazon SageMaker console homepage.
+Go to the SageMaker menu on the left and choose &amp;ldquo;Notebook instances&amp;rdquo; under the &amp;ldquo;Notebook&amp;rdquo; option.
+Wait until the notebook instance status is InService, then click on Open Jupyter - whilst you&amp;rsquo;re waiting you can perform step #1 of the next section to copy some files from Git</description>
+    </item>
+    
+    <item>
+      <title>Creating Parallel Solutions</title>
+      <link>/personalize/full/parallel.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/personalize/full/parallel.html</guid>
+      <description>Create Item-to-Item Similarities Solution Using the same methods as before, go to the Services drop-down in the console and navigate to the Amazon Personalize service in another tab, and select Dataset groups. You will see the dataset group that you created earlier, and click on the name of your dataset group.
+The left-hand side, which will show you the solution that you&amp;rsquo;re currently creating via your notebook. Then, select Solutions and recipes, then click on the Create solution button.</description>
+    </item>
+    
+    <item>
+      <title>Configure the Video Recommendation App</title>
+      <link>/personalize/full/videorecommendation.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/personalize/full/videorecommendation.html</guid>
+      <description>Django only allows access via pre-defined source IP addresses. Naturally, these could be open to the internet, but they recommend only exposing it the instance private IP address (for internal calls) and to your front-end load balancer. You already have a reference to the private IP address, so you now need to extract the Load Balancer DNS entry. Go back to the EC2 console screen, but this time select Load Balancers on the left-hand menu; select your Application Load Balancer and in the details screen that comes up select the DNS name and store it for later.</description>
+    </item>
+    
+    <item>
+      <title>Running the Video Recommendation App</title>
+      <link>/personalize/full/runvideorecommendation.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/personalize/full/runvideorecommendation.html</guid>
+      <description>Running the Video Recommendation App You are now ready to run the application server! Simply execute the runmyserver script, and you should see status messages appearing quickly - these initial ones are the Load Balancer health-checks, and after a minute or so the instance should be declared healthy by the Load Balancer Target Group. Note, you will see some warnings around the psycopg2 component, but this can be ignored.
+To execute the runmyserver script</description>
+    </item>
+    
+    <item>
+      <title>Create Additional Personalize Campaigns</title>
+      <link>/personalize/full/additionalpersonalize.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/personalize/full/additionalpersonalize.html</guid>
+      <description>If you have built the additional two Personalize models, for Item-to-Item Similarities and Personal Rankings, then you&amp;rsquo;ll need to create the associated campaigns for these solutions, as it is the campaigns that we will add to the application. If those solutions have been built then continue with these steps, but if not you can always come back to these steps later before adding them to the application.
+In the AWS Console, go to the Amazon Personalize service console, click on Dataset groups link on the left-hand menu, and select the personalize-recs-dataset-group link, then click into the Campaigns menu item on the left.</description>
+    </item>
+    
+    <item>
+      <title>Plug In the Recommendation Model(s)</title>
+      <link>/personalize/full/plugin.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/personalize/full/plugin.html</guid>
+      <description>Plug In the Recommendation Model(s) The application uses the Django Administration feature to define models that are available to the application. This allows multiple models of different types to be configured, and injected or removed from the application at any time. There are three modes of operation of the application:
+Recommendations - standard recommendations, allowing different 2 models to be compared at once Personal Ranking - re-ranks popular films in a genre, with a single model on-screen at once Similar Items - shows items similar to others, with a single model on-screen at once.</description>
+    </item>
+    
+    <item>
+      <title>Additional Campaigns to Build</title>
+      <link>/personalize/full/additionalcampaigns.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/personalize/full/additionalcampaigns.html</guid>
+      <description>If you look at the embedded documentation you&amp;rsquo;ll see that it talks about 3 other models, which there isn&amp;rsquo;t time to build during this Lab. They involve the user of additional data files - a user demographic file, and a item metadata file, all of which are supplied with the Movie Lens data set in your Sagemaker Notebook. Because they required additional data-sets, you need to create each of these within their own Personalize Dataset Group, and you also need to re-import the original interactions file DEMO-movie-lens-100k.</description>
+    </item>
+    
+    <item>
+      <title>Cleaning up</title>
+      <link>/personalize/full/closing.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/personalize/full/closing.html</guid>
+      <description>Terminating the Notebook Instance Open the Amazon SageMaker console and click on Notebook instances Find the notebook instance listed as [Name]-lab-notebook, select its radio button and then click the Actions dropdown.
+Click Stop to stop the Notebook Instance. This does not delete the underlying data and resources. After a few minutes the instance status will change to Stopped, and you can now click on the Actions dropdown again, but this time select Delete.</description>
+    </item>
+    
+    <item>
+      <title>Conclusion</title>
+      <link>/personalize/full/conclusion.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/personalize/full/conclusion.html</guid>
+      <description>Upon completion of this lab you will have performed the following:
+Launched a Jupyter notebook from with the Amazon SageMaker service Imported external files into the notebook environment Seen how to enable Preview services within a notebook (assuming your account has been whitelisted for Preview access) Used the pandas libraries to do some pre-processing of the source data Built and deployed an ML model based upon the HRNN algorithm Tested your model via just a few lines of code Deployed your model into a live application You should now be able to embed this model from within your own application code, using any language that is supported by the AWS SDK.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Step Functions on Amazon SageMaker Workshop</title>
+    <link>/step.html</link>
+    <description>Recent content in Step Functions on Amazon SageMaker Workshop</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="/step/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Upload the data to S3</title>
+      <link>/step/upload.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/step/upload.html</guid>
+      <description>First you need to create a bucket for this experiment. Upload the data from the following public location to your own S3 bucket. To facilitate the work of the crawler use two different prefixs (folders): one for the billing information and one for reseller.
+We can execute this on the console of the Jupyter Notebook or we can just execute it directly:
+Download the data Your Bucket Name
+your_bucket = &amp;#39;&amp;lt;YOUR BUCKET NAME e.</description>
+    </item>
+    
+    <item>
+      <title>Create the Crawler</title>
+      <link>/step/crawler.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/step/crawler.html</guid>
+      <description>To use this csv information in the context of a Glue ETL, first we have to create a Glue crawler pointing to the location of each file. The crawler will try to figure out the data types of each column. The safest way to do this process is to create one crawler for each table pointing to a different location.
+Go to the AWS Console.
+Select under Services AWS Glue.</description>
+    </item>
+    
+    <item>
+      <title>Create the Glue Job</title>
+      <link>/step/gluejob.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/step/gluejob.html</guid>
+      <description>Now we are going to create a GLUE ETL job in python 3.6. In this job, we can combine both the ETL from Notebook #2 and the Preprocessing Pipeline from Notebook #4.
+Note that, instead of reading from a csv file, we are going to use Athena to read from the resulting tables of the Glue Crawler.
+Glue is a serverless service so the processing power assigned is meassured in (Data Processing Units) DPUs.</description>
+    </item>
+    
+    <item>
+      <title>Orchestration</title>
+      <link>/step/orchestration.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/step/orchestration.html</guid>
+      <description>Now it&amp;rsquo;s time to create all the necesary steps to schedule the training, deployment and inference with the model. For this, we are going to use an architecture similar to the serverless sagemaker orchestration but adapted to our specific problem.
+First, we need to create lambda functions capables of:
+Training the model Awaiting for training Deploying the model Awaiting for deploy Predict, save predictions and delete the endpoint So, let&amp;rsquo;s do it</description>
+    </item>
+    
+    <item>
+      <title>Create Role</title>
+      <link>/step/createrole.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/step/createrole.html</guid>
+      <description>Create a role with SageMaker and S3 access To execute this lambdas we are going to need a role SageMaker and S3 permissions.
+Follow this link:
+https://console.aws.amazon.com/iam/home?region=us-east-1#/roles$new?step=type
+Select Lambda - Next In Permissions: Select AmazonSageMakerFullAccess and AmazonS3FullAccess In Tags: Next In Name: workshop-role - Create role Make sure AmazonSageMakerFullAccess and AmazonS3FullAccess are in place Go to the Trust relationships tab and click Edit trust relationship Delete the Policy Document and paste: { &amp;#34;Version&amp;#34;: &amp;#34;2012-10-17&amp;#34;, &amp;#34;Statement&amp;#34;: [ { &amp;#34;Effect&amp;#34;: &amp;#34;Allow&amp;#34;, &amp;#34;Principal&amp;#34;: { &amp;#34;Service&amp;#34;: [ &amp;#34;lambda.</description>
+    </item>
+    
+    <item>
+      <title>Train Model Lambda</title>
+      <link>/step/trainmodel.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/step/trainmodel.html</guid>
+      <description>Go to the AWS Console and under Services, select Lambda Go to the Functions Pane and select Create Function Author from scratch Or follow this link https://console.aws.amazon.com/lambda/home?region=us-east-1#/create?firstrun=true Parameters for the function: * Name: lambdaModelTrain * Runtime Python 3.6 * Executing role: Use an existing role and select the role you created in the previous step (workshop-role) - Create function This lambda function doesn&amp;rsquo;t need to receive any parameters, but it should return the resulting hyperparameter tunning optimization job name.</description>
+    </item>
+    
+    <item>
+      <title>Await Model Lambda</title>
+      <link>/step/awaitmodel.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/step/awaitmodel.html</guid>
+      <description>Go to the AWS Console and under Services, select Lambda Go to the Functions Pane and select Create Function Author from scratch Or follow this link https://console.aws.amazon.com/lambda/home?region=us-east-1#/create?firstrun=true Parameters for the function: Name: lambdaModelAwait Runtime: Python 3.6 Executing role: Use an existing role and select the role you created in the previous step (workshop-role) - Create function This lambda function, now receives the output of the previous step and allows us to check if the process is done or not.</description>
+    </item>
+    
+    <item>
+      <title>Deploy Model Lambda</title>
+      <link>/step/deploymodel.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/step/deploymodel.html</guid>
+      <description>Deploy Model In SageMaker: Lambda Function
+In this lambda function, we are going to need to use the best training job from the previous step to deploy a predictor.
+Go to the AWS Console and under Services, select Lambda Go to the Functions Pane and select Create Function Author from scratch Or follow this link https://console.aws.amazon.com/lambda/home?region=us-east-1#/create?firstrun=true Parameters for the function: Name: lambdaModelDeploy Runtime: Python 3.6 Executing role: Use an existing role and select the role you created in the previous step (workshop-role) - Create function The ARN for the variable EXECUTION_ROLE can be found here: https://console.</description>
+    </item>
+    
+    <item>
+      <title>Use Model to Predict</title>
+      <link>/step/usemodel.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/step/usemodel.html</guid>
+      <description>In this lambda function, we are going to use the deployed model to predict.
+Go to the AWS Console and under Services, select Lambda Go to the Functions Pane and select Create Function Author from scratch Or follow this link https://console.aws.amazon.com/lambda/home?region=us-east-1#/create?firstrun=true Parameters for the function: Name: lambdaModelPredict Runtime: Python 3.6 Executing role: Use an existing role and select the role you created in the previous step (workshop-role) - Create function This last lambda function doesn&amp;rsquo;t take any parameters, but in this case we need to touch the default parameters of the lambda to configure Max Memory in 1024 MB and Timeout in 15 Mins.</description>
+    </item>
+    
+    <item>
+      <title>Create Step Function</title>
+      <link>/step/createstep.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/step/createstep.html</guid>
+      <description>Now we have to create a step function to orchestrate the execution of all the previous step.
+Follow this link: https://console.aws.amazon.com/states/home?region=us-east-1#/statemachines/create
+This is the resulting diagram:
+For step function we use the ASL markup language. We have to change all the arn from 1111111111111 to our account number.
+{ &amp;#34;StartAt&amp;#34;: &amp;#34;ETL&amp;#34;, &amp;#34;States&amp;#34;: { &amp;#34;ETL&amp;#34;: { &amp;#34;Type&amp;#34;: &amp;#34;Task&amp;#34;, &amp;#34;Resource&amp;#34;: &amp;#34;arn:aws:states:::glue:startJobRun.sync&amp;#34;, &amp;#34;Parameters&amp;#34;: { &amp;#34;JobName&amp;#34;: &amp;#34;etlandpipeline&amp;#34; }, &amp;#34;Next&amp;#34;: &amp;#34;StartTrainingJob&amp;#34; }, &amp;#34;StartTrainingJob&amp;#34;: { &amp;#34;Type&amp;#34;: &amp;#34;Task&amp;#34;, &amp;#34;Resource&amp;#34;: &amp;#34;arn:aws:lambda:us-east-1:1111111111111:function:lambdaModelTrain&amp;#34;, &amp;#34;ResultPath&amp;#34;: &amp;#34;$&amp;#34;, &amp;#34;Next&amp;#34;: &amp;#34;CheckStatusTraining&amp;#34; }, &amp;#34;CheckStatusTraining&amp;#34;: { &amp;#34;Type&amp;#34;: &amp;#34;Task&amp;#34;, &amp;#34;Resource&amp;#34;: &amp;#34;arn:aws:lambda:us-east-1:1111111111111:function:lambdaModelAwait&amp;#34;, &amp;#34;ResultPath&amp;#34;: &amp;#34;$&amp;#34;, &amp;#34;Next&amp;#34;: &amp;#34;CheckTrainingBranch&amp;#34; }, &amp;#34;CheckTrainingBranch&amp;#34;: { &amp;#34;Type&amp;#34;: &amp;#34;Choice&amp;#34;, &amp;#34;Choices&amp;#34;: [ { &amp;#34;Or&amp;#34;: [{ &amp;#34;Variable&amp;#34;: &amp;#34;$.</description>
+    </item>
+    
+    <item>
+      <title>Schedule the State Machine</title>
+      <link>/step/schedule.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/step/schedule.html</guid>
+      <description>Well! we have all greens on our state machine, time to put the cron in order to forget about this
+We are going to use Cloudwacth Event Rules to create a scheduled task in order to execute this once a day.
+Follow this link: https://console.aws.amazon.com/cloudwatch/home?region=us-east-1#rules:action=create
+And we fill the form like this:
+Event Source: Schedule Cron expression: 0 10 * * ? * (every day at 10 AM UTC) Targets: Step Functions state machine State machine: the name of your state machine Create a new role for this specific resource - Configure details Name: MLcron - Create rule And that&amp;rsquo;s it!</description>
+    </item>
+    
+    <item>
+      <title>Cloudformation Template</title>
+      <link>/step/cloudformation.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/step/cloudformation.html</guid>
+      <description>In case that you want to deploy the stack without going step by step, here is the Cloudformation stack:
+https://console.aws.amazon.com/cloudformation/home#/stacks/new?stackName=LabStack&amp;amp;region=us-east-1&amp;amp;templateURL=https://mrtdomshare.s3.amazonaws.com/sagemakerworkshop-step/sagemaker-step-functions.yml
+The only step that you have to make manually is uploading the data to S3 (the Billing and Reseller folder with the csv files)
+Then you go to step functions, and execute it manually to see the whole process</description>
+    </item>
+    
+  </channel>
+</rss>

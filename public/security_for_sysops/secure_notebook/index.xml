@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Working Securely on Amazon SageMaker Workshop</title>
+    <link>/security_for_sysops/secure_notebook.html</link>
+    <description>Recent content in Working Securely on Amazon SageMaker Workshop</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="/security_for_sysops/secure_notebook/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Secure Notebooks</title>
+      <link>/security_for_sysops/secure_notebook/secure_notebook.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/security_for_sysops/secure_notebook/secure_notebook.html</guid>
+      <description>Amazon SageMaker is designed to empower data scientists and developers, enabling them to build more quickly and remain focused on their machine learning project. One of the ways that SageMaker does this is by providing hosted Jupyter Notebook servers. With a single API call users can create a Jupyter Notebook server with the latest patches and kernels available. No need to install software, patch or maintain systems - it is all done for you.</description>
+    </item>
+    
+    <item>
+      <title>Lab 3: Deploy a Jupyter Notebook</title>
+      <link>/security_for_sysops/secure_notebook/secure_notebook_lab.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/security_for_sysops/secure_notebook/secure_notebook_lab.html</guid>
+      <description>At this point, the cloud platform engineering team has built a self-service mechanism to provision secure environments to host data science projects. The project administrators have provisioned resources using the self-service mechanism for your team to work, and they have provided you with a self-service mechanism to enable you to provision SageMaker notebooks. Now, use these resources to provision a Jupyter notebook and start developing your ML solution.
+Launch the notebook product Navigate to the AWS Service Catalog console and on go to the detail page for the recently provisioned data science environment.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Built-in Algorithms on Amazon SageMaker Workshop</title>
+    <link>/builtin.html</link>
+    <description>Recent content in Built-in Algorithms on Amazon SageMaker Workshop</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="/builtin/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Video Game Sales Prediction with XGBoost</title>
+      <link>/builtin/xgboost.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/builtin/xgboost.html</guid>
+      <description>In this section, you&amp;rsquo;ll work your way through a Jupyter notebook that demonstrates how to use a built-in algorithm in SageMaker. More specifically, we&amp;rsquo;ll use SageMaker&amp;rsquo;s version of XGBoost, a popular and efficient open-source implementation of the gradient boosted trees algorithm.
+Gradient boosting is a supervised learning algorithm that attempts to predict a target variable by combining the estimates of a set of simpler, weaker models. XGBoost has done remarkably well in machine learning competitions because it robustly handles a wide variety of data types, relationships, and distributions.</description>
+    </item>
+    
+    <item>
+      <title>Image Classification with ResNet</title>
+      <link>/builtin/resnet.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/builtin/resnet.html</guid>
+      <description>In this section, you&amp;rsquo;ll work your way through a Jupyter notebook that demonstrates how to use a built-in algorithm in SageMaker. More specifically, you&amp;rsquo;ll use SageMaker&amp;rsquo;s image classification algorithm, a supervised learning algorithm that takes an image as input and classifies it into one of multiple output categories. It uses a convolutional neural network (ResNet) that can be trained from scratch, or trained using transfer learning when a large number of training images are not available.</description>
+    </item>
+    
+    <item>
+      <title>Anomaly Detection with Random Cut Forest</title>
+      <link>/builtin/rcf.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/builtin/rcf.html</guid>
+      <description>In this section, you&amp;rsquo;ll work your way through a Jupyter notebook that demonstrates how to use a built-in algorithm in SageMaker. More specifically, you&amp;rsquo;ll use SageMaker&amp;rsquo;s Random Cut Forest (RCF) algorithm, an algorithm designed to detect anomalous data points within a dataset. Examples of when anomalies are important to detect include when website activity uncharacteristically spikes, when temperature data diverges from a periodic behaviour, or when changes to public transit ridership reflect the occurrence of a special event.</description>
+    </item>
+    
+    <item>
+      <title>Parallelized Data Distribution</title>
+      <link>/builtin/parallelized.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/builtin/parallelized.html</guid>
+      <description>SageMaker makes it easy to train machine learning models across a cluster containing a large number of machines. This a non-trivial process, but SageMaker&amp;rsquo;s built-in algorithms and pre-built MXNet and TensorFlow containers hide most of the complexity from you. Nevertheless, there are decisions about how to structure data that will have implications regarding how the distributed training is carried out.
+In this section, you will learn about how to take full advantage of distributed training clusters when using one of SageMaker&amp;rsquo;s built-in algorithms.</description>
+    </item>
+    
+  </channel>
+</rss>

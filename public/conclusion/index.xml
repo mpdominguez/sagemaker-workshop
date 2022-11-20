@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Conclusion on Amazon SageMaker Workshop</title>
+    <link>/conclusion.html</link>
+    <description>Recent content in Conclusion on Amazon SageMaker Workshop</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="/conclusion/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What Have We Accomplished</title>
+      <link>/conclusion/conclusion.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/conclusion/conclusion.html</guid>
+      <description>We have:
+Created a Notebook for exploratory analysis Creaetd an ETL to prepare training data Trained the model with Hyperparameter Optimization Putted &amp;ldquo;new data&amp;rdquo; through a preprocessing pipeline to get it ready for prediction Automatized batch predictions for new data using a combination of CloudWatch, Step Functions, Lambda, Glue and SageMaker. </description>
+    </item>
+    
+  </channel>
+</rss>

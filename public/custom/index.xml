@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Custom Algorithms on Amazon SageMaker Workshop</title>
+    <link>/custom.html</link>
+    <description>Recent content in Custom Algorithms on Amazon SageMaker Workshop</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="/custom/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Submit custom code</title>
+      <link>/custom/code.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/custom/code.html</guid>
+      <description>In this section, you will train a neural network locally on the location from where this notebook is run (typically the SageMaker Notebook instance) using MXNet. You will then see how to create an endpoint from the trained MXNet model and deploy it on SageMaker. You will then inference from the newly created SageMaker endpoint. For this section, you&amp;rsquo;ll be using the MNIST dataset.
+Running the notebook Download the mxnet_mnist_byom.zip file.</description>
+    </item>
+    
+    <item>
+      <title>Use your own custom algorithms</title>
+      <link>/custom/algo.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/custom/algo.html</guid>
+      <description>In this section, you&amp;rsquo;ll create your own training script using TensorFlow and the building blocks provided in tf.layers, which will predict the ages of abalones based on their physical measurements. It&amp;rsquo;s possible to estimate the age of an abalone (sea snail) by the number of rings on its shell. In this section, you&amp;rsquo;ll be using the UCI Abalone dataset.
+Writing Custom TensorFlow Model Training and Inference Code To train a model on Amazon SageMaker using custom TensorFlow code and deploy it on Amazon SageMaker, you need to implement training and inference code interfaces in your code.</description>
+    </item>
+    
+    <item>
+      <title>Overview of containers for Amazon SageMaker</title>
+      <link>/custom/containers.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/custom/containers.html</guid>
+      <description>SageMaker makes extensive use of Docker containers to allow users to train and deploy algorithms. Containers allow developers and data scientists to package software into standardized units that run consistently on any platform that supports Docker. Containerization packages code, runtime, system tools, system libraries and settings all in the same place, isolating it from its surroundings, and insuring a consistent runtime regardless of where it is being run.
+When you develop a model in Amazon SageMaker, you can provide separate Docker images for the training code and the inference code, or you can combine them into a single Docker image.</description>
+    </item>
+    
+  </channel>
+</rss>

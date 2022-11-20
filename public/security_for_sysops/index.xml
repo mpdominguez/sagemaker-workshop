@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Build Secure Environments on Amazon SageMaker Workshop</title>
+    <link>/security_for_sysops.html</link>
+    <description>Recent content in Build Secure Environments on Amazon SageMaker Workshop</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="/security_for_sysops/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Scenario</title>
+      <link>/security_for_sysops/scenario.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/security_for_sysops/scenario.html</guid>
+      <description>You are a member of a Cloud Platform Engineering team that has been tasked with enabling your business&amp;rsquo;s data scientists to deliver machine learning-based projects that are trained on highly sensitive company and customer data. The project teams are constrained by shared on-premise resources so you have been tasked with determining how the business can leverage the cloud to provision environments for the data science teams. The environment must be secure, protecting the sensitive data, while also enabling the data science teams to self-service.</description>
+    </item>
+    
+    <item>
+      <title>Tools</title>
+      <link>/security_for_sysops/tools.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/security_for_sysops/tools.html</guid>
+      <description>To work through these labs you will need:
+An AWS account
+With privileges to create IAM roles, attach IAM policies, create AWS VPCs, configure Service Catalog, create Amazon S3 buckets, and work with Amazon SageMaker.
+Access to the AWS web console
+Many of the instructions will guide you through working with the various service consoles.
+Jupyter cheat sheet
+If you are unfamiliar with the Jupyter notebook interface or its keybindings a cheat sheet may help you navigate.</description>
+    </item>
+    
+    <item>
+      <title>Security Overview</title>
+      <link>/security_for_sysops/security_overview.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/security_for_sysops/security_overview.html</guid>
+      <description>Amazon SageMaker is a powerful enabler and a key component of a data science environment, but it&amp;rsquo;s only part of what is required to build a complete secure data science environment. For more robust security you will need other AWS services such as Amazon CloudWatch, Amazon S3, and AWS VPC. To begin, let&amp;rsquo;s talk about some of the key things you will want in place, working in concert, with Amazon SageMaker.</description>
+    </item>
+    
+    <item>
+      <title>Summary</title>
+      <link>/security_for_sysops/summary.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/security_for_sysops/summary.html</guid>
+      <description>Let&amp;rsquo;s look back on what you&amp;rsquo;ve accomplished during the labs in this section.
+In this series of labs you used many AWS services to support your machine learning process. As the Cloud Platform Engineering team you created a secure network environment with corrective controls for the data science administration team. You also created a self-service product that codified best practices and allowed the Data Science Administration team to support the data science project teams without needing expansive permissions in AWS.</description>
+    </item>
+    
+    <item>
+      <title>Frequently Asked Questions</title>
+      <link>/security_for_sysops/faq.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/security_for_sysops/faq.html</guid>
+      <description>The following is a compiled list of questions or issues you may face while going through these labs. If you encounter any issues, hopefully you will find helpful guidance below.
+Q: I am trying to execute a cell in Jupyter Notebook but nothing happens.
+A: Check whether the kernel has finished loading. You can see kernel status in the upper right corner of the Notebook. For the purpose of this workshop, the kernel should be conda_tensorflow_p27.</description>
+    </item>
+    
+  </channel>
+</rss>

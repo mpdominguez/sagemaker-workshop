@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Prevention on Amazon SageMaker Workshop</title>
+    <link>/security_for_sysops/preventive.html</link>
+    <description>Recent content in Prevention on Amazon SageMaker Workshop</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="/security_for_sysops/preventive/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Preventive Controls</title>
+      <link>/security_for_sysops/preventive/preventive_controls.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/security_for_sysops/preventive/preventive_controls.html</guid>
+      <description>Amazon SageMaker, like other services, is goverened by Identity and Access Management (IAM). You configure IAM using policy documents which explicitly grant permissions to your environment.
+AWS IAM is based upon the concepts of Principals, Actions, Resources, and Conditions (PARC). This allows you to specify, using IAM policies who (principals) can do what (actions) to which resources and under what circumstances (conditions). Conditions are a powerful part of IAM policies and gives you the ability to control aspects of the actions being taken by principals in your environment.</description>
+    </item>
+    
+    <item>
+      <title>Lab 5: Preventive Controls</title>
+      <link>/security_for_sysops/preventive/preventive_lab.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/security_for_sysops/preventive/preventive_lab.html</guid>
+      <description>In this lab, you will implement a preventive control that will stop a training job from starting if it&amp;rsquo;s not launched within a VPC. In the interest of defence in depth you will implement the preventive control to complement the detective control exercised in the previous lab.
+The preventive control you will deploy here is a modification to the IAM policy which grants a user&amp;rsquo;s notebook the permission to launch a training job.</description>
+    </item>
+    
+  </channel>
+</rss>

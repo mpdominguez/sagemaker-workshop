@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SageMaker on Amazon SageMaker Workshop</title>
+    <link>/start.html</link>
+    <description>Recent content in SageMaker on Amazon SageMaker Workshop</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="/start/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Create the Notebook</title>
+      <link>/start/create.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/start/create.html</guid>
+      <description>Follow this link to create a notebook instance:
+https://us-east-1.console.aws.amazon.com/sagemaker/home?region=us-east-1#/notebook-instances/create
+We&amp;rsquo;ll give a name to the notebook instance and in &amp;ldquo;Notebook instance type&amp;rdquo; we&amp;rsquo;ll select
+ml.m4.4xlarge Create an IAM role with access to:
+Any S3 bucket Athena Full Access. On the Git repositories tab, choose the option &amp;ldquo;Clone a public Git Repository to this notebook instance only&amp;rdquo; an paste the following repo url: https://github.com/githubmg/buildon-workshop
+The rest of the data, let&amp;rsquo;s leave it by default and click &amp;ldquo;Create notebook instance&amp;rdquo;.</description>
+    </item>
+    
+    <item>
+      <title>Clone the Service Repos</title>
+      <link>/start/clone.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/start/clone.html</guid>
+      <description>Now, let&amp;rsquo;s open a Terminal in our notebook by going to &amp;ldquo;New/Terminal&amp;rdquo; and perform the following commands
+cd ~/SageMaker git clone https://github.com/githubmg/buildon-workshop If we reload the Notebook, we&amp;rsquo;ll see a new folder &amp;ldquo;buildon-workshop&amp;rdquo; and inside another one called &amp;ldquo;pure-sagemaker-workshop&amp;rdquo;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Airflow Integration on Amazon SageMaker Workshop</title>
+    <link>/airflow.html</link>
+    <description>Recent content in Airflow Integration on Amazon SageMaker Workshop</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="/airflow/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Introduction</title>
+      <link>/airflow/introduction.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/airflow/introduction.html</guid>
+      <description>Introduction ML workflows consist of tasks that are often cyclical and iterative to improve the accuracy of the model and achieve better results. We recently announced new integrations with Amazon SageMaker that allow you to build and manage these workflows:
+AWS Step Functions automates and orchestrates Amazon SageMaker related tasks in an end-to-end workflow. You can automate publishing datasets to Amazon S3, training an ML model on your data with Amazon SageMaker, and deploying your model for prediction.</description>
+    </item>
+    
+    <item>
+      <title>High-Level Solution</title>
+      <link>/airflow/highlevel.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/airflow/highlevel.html</guid>
+      <description>We’ll start by exploring the data, transforming the data, and training a model on the data. We’ll fit the ML model using an Amazon SageMaker managed training cluster. We’ll then deploy to an endpoint to perform batch predictions on the test data set. All of these tasks will be plugged into a workflow that can be orchestrated and automated through Apache Airflow integration with Amazon SageMaker.
+The following diagram shows the ML workflow we’ll implement for building the recommender system.</description>
+    </item>
+    
+    <item>
+      <title>Airflow Concepts</title>
+      <link>/airflow/airflowconcepts.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/airflow/airflowconcepts.html</guid>
+      <description>Before implementing the solution, let’s get familiar with Airflow concepts. If you are already familiar with Airflow concepts, skip to the Airflow Amazon SageMaker operators section.
+Apache Airflow is an open-source tool for orchestrating workflows and data processing pipelines. Airflow allows you to configure, schedule, and monitor data pipelines programmatically in Python to define all the stages of the lifecycle of a typical workflow management.
+Airflow nomenclature DAG (Directed Acyclic Graph): DAGs describe how to run a workflow by defining the pipeline in Python, that is configuration as code.</description>
+    </item>
+    
+    <item>
+      <title>Airflow Setup</title>
+      <link>/airflow/airflowsetup.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/airflow/airflowsetup.html</guid>
+      <description>We will set up a simple Airflow architecture with a scheduler, worker, and web server running on a single instance. Typically, you will not use this setup for production workloads. We will use AWS CloudFormation to launch the AWS services required to create the components in this blog post. The following diagram shows the configuration of the architecture to be deployed.
+The stack includes the following:
+An Amazon Elastic Compute Cloud (EC2) instance to set up the Airflow components.</description>
+    </item>
+    
+    <item>
+      <title>Building an ML Workflow</title>
+      <link>/airflow/buildingworkflow.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/airflow/buildingworkflow.html</guid>
+      <description>In this section, we’ll create a ML workflow using Airflow operators, including Amazon SageMaker operators to build the recommender. You can download the companion Jupyter notebook to look at individual tasks used in the ML workflow. We’ll highlight the most important pieces here.
+Data preprocessing As mentioned earlier, the dataset contains ratings from over 2 million Amazon customers on over 160,000 digital videos. More details on the dataset are here. After analyzing the dataset, we see that there are only about 5 percent of customers who have rated 5 or more videos, and only 25 percent of videos have been rated by 9+ customers.</description>
+    </item>
+    
+    <item>
+      <title>Putting it all together</title>
+      <link>/airflow/puttingalltogether.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/airflow/puttingalltogether.html</guid>
+      <description>Airflow DAG integrates all the tasks we’ve described as a ML workflow. Airflow DAG is a Python script where you express individual tasks with Airflow operators, set task dependencies, and associate the tasks to the DAG to run on demand or at a scheduled interval. The Airflow DAG script is divided into following sections.
+Set DAG with parameters such as schedule interval, concurrency, etc. dag = DAG( dag_id=&amp;#39;sagemaker-ml-pipeline&amp;#39;, default_args=args, schedule_interval=None, concurrency=1, max_active_runs=1, user_defined_filters={&amp;#39;tojson&amp;#39;: lambda s: JSONEncoder().</description>
+    </item>
+    
+    <item>
+      <title>Clean up</title>
+      <link>/airflow/cleanup.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/airflow/cleanup.html</guid>
+      <description>Now to the final step, cleaning up the resources.
+To avoid unnecessary charges on your AWS account do the following:
+Destroy all of the resources created by the CloudFormation stack in Airflow set up by deleting the stack after you’re done experimenting with it. You can follow the steps here to delete the stack. You have to manually delete the S3 bucket created by the CloudFormation stack because AWS CloudFormation can’t delete a non-empty Amazon S3 bucket.</description>
+    </item>
+    
+    <item>
+      <title>Conclusion</title>
+      <link>/airflow/conclusion.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/airflow/conclusion.html</guid>
+      <description>In this workshop, you have seen that building an ML workflow involves quite a bit of preparation but it helps improve the rate of experimentation, engineering productivity, and maintenance of repetitive ML tasks. Airflow Amazon SageMaker Operators provide a convenient way to build ML workflows and integrate with Amazon SageMaker.
+You can extend the workflows by customizing the Airflow DAGs with any tasks that better fit your ML workflows, such as feature engineering, creating an ensemble of training models, creating parallel training jobs, and retraining models to adapt to the data distribution changes.</description>
+    </item>
+    
+  </channel>
+</rss>

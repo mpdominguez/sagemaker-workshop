@@ -1,0 +1,4462 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.104.2" />
+    <meta name="description" content="Amazon SageMaker Workshop">
+<meta name="author" content="Daniele Stroppa">
+
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+    <title>Overview of containers for Amazon SageMaker :: Amazon SageMaker Workshop</title>
+
+    
+    <link href="/css/nucleus.css?1668966810" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1668966810" rel="stylesheet">
+    <link href="/css/hybrid.css?1668966810" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1668966810" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1668966810" rel="stylesheet">
+    <link href="/css/auto-complete.css?1668966810" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1668966810" rel="stylesheet">
+    <link href="/css/theme.css?1668966810" rel="stylesheet">
+    <link href="/css/tabs.css?1668966810" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1668966810" rel="stylesheet">
+    
+    <link href="/css/theme-mine.css?1668966810" rel="stylesheet">
+    
+    
+
+    <script src="/js/jquery-3.3.1.min.js?1668966810"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/custom/containers.html">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a href = "https://sagemaker-workshop.netlify.app/"><img alt = "Smartworkz Logo" src="/images/smartworkz.png"><b>Amazon SageMaker Workshop</b></a>   
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+<script src="https://kit.fontawesome.com/d9c6148b9d.js" crossorigin="anonymous"></script>
+
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1668966810"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1668966810"></script>
+<script type="text/javascript">
+    
+        var baseurl = "\/";
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1668966810"></script>
+
+    
+  </div>
+  
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/introduction.html" title="Introduction" class="dd-item
+        
+        
+        
+        ">
+      <a href="/introduction.html">
+          Introduction
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/introduction/concepts.html" title="Machine Learning" class="dd-item ">
+        <a href="/introduction/concepts.html">
+        Machine Learning
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/introduction/notebook.html" title="Create a Notebook Instance" class="dd-item ">
+        <a href="/introduction/notebook.html">
+        Create a Notebook Instance
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/airflow.html" title="Airflow Integration" class="dd-item
+        
+        
+        
+        ">
+      <a href="/airflow.html">
+          Airflow Integration
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/airflow/introduction.html" title="Introduction" class="dd-item ">
+        <a href="/airflow/introduction.html">
+        Introduction
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/airflow/highlevel.html" title="High-Level Solution" class="dd-item ">
+        <a href="/airflow/highlevel.html">
+        High-Level Solution
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/airflow/airflowconcepts.html" title="Airflow Concepts" class="dd-item ">
+        <a href="/airflow/airflowconcepts.html">
+        Airflow Concepts
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/airflow/airflowsetup.html" title="Airflow Setup" class="dd-item ">
+        <a href="/airflow/airflowsetup.html">
+        Airflow Setup
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/airflow/buildingworkflow.html" title="Building an ML Workflow" class="dd-item ">
+        <a href="/airflow/buildingworkflow.html">
+        Building an ML Workflow
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/airflow/puttingalltogether.html" title="Putting it all together" class="dd-item ">
+        <a href="/airflow/puttingalltogether.html">
+        Putting it all together
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/airflow/cleanup.html" title="Clean up" class="dd-item ">
+        <a href="/airflow/cleanup.html">
+        Clean up
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/airflow/conclusion.html" title="Conclusion" class="dd-item ">
+        <a href="/airflow/conclusion.html">
+        Conclusion
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/personalize.html" title="Amazon Personalize" class="dd-item
+        
+        
+        
+        ">
+      <a href="/personalize.html">
+          Amazon Personalize
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/personalize/lite.html" title="Lite Version" class="dd-item
+        
+        
+        
+        ">
+      <a href="/personalize/lite.html">
+          Lite Version
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/personalize/lite/introduction.html" title="Introduction" class="dd-item ">
+        <a href="/personalize/lite/introduction.html">
+        Introduction
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/personalize/lite/building.html" title="Building Your Environment" class="dd-item ">
+        <a href="/personalize/lite/building.html">
+        Building Your Environment
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/personalize/lite/cloudformation.html" title="Cloud Formation Wizard" class="dd-item ">
+        <a href="/personalize/lite/cloudformation.html">
+        Cloud Formation Wizard
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/personalize/lite/agenda.html" title="Agenda" class="dd-item ">
+        <a href="/personalize/lite/agenda.html">
+        Agenda
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/personalize/lite/using.html" title="Using the Notebooks" class="dd-item ">
+        <a href="/personalize/lite/using.html">
+        Using the Notebooks
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/personalize/lite/clean.html" title="After the Notebooks" class="dd-item ">
+        <a href="/personalize/lite/clean.html">
+        After the Notebooks
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/personalize/full.html" title="Full Version" class="dd-item
+        
+        
+        
+        ">
+      <a href="/personalize/full.html">
+          Full Version
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/personalize/full/overview.html" title="Overview" class="dd-item ">
+        <a href="/personalize/full/overview.html">
+        Overview
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/personalize/full/deploy.html" title="Deploy the App" class="dd-item ">
+        <a href="/personalize/full/deploy.html">
+        Deploy the App
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/personalize/full/setup.html" title="Setup your Jupyter Notebook" class="dd-item ">
+        <a href="/personalize/full/setup.html">
+        Setup your Jupyter Notebook
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/personalize/full/parallel.html" title="Creating Parallel Solutions" class="dd-item ">
+        <a href="/personalize/full/parallel.html">
+        Creating Parallel Solutions
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/personalize/full/videorecommendation.html" title="Configure the Video Recommendation App" class="dd-item ">
+        <a href="/personalize/full/videorecommendation.html">
+        Configure the Video Recommendation App
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/personalize/full/runvideorecommendation.html" title="Running the Video Recommendation App" class="dd-item ">
+        <a href="/personalize/full/runvideorecommendation.html">
+        Running the Video Recommendation App
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/personalize/full/additionalpersonalize.html" title="Create Additional Personalize Campaigns" class="dd-item ">
+        <a href="/personalize/full/additionalpersonalize.html">
+        Create Additional Personalize Campaigns
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/personalize/full/plugin.html" title="Plug In the Recommendation Model(s)" class="dd-item ">
+        <a href="/personalize/full/plugin.html">
+        Plug In the Recommendation Model(s)
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/personalize/full/additionalcampaigns.html" title="Additional Campaigns to Build" class="dd-item ">
+        <a href="/personalize/full/additionalcampaigns.html">
+        Additional Campaigns to Build
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/personalize/full/closing.html" title="Cleaning up" class="dd-item ">
+        <a href="/personalize/full/closing.html">
+        Cleaning up
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/personalize/full/conclusion.html" title="Conclusion" class="dd-item ">
+        <a href="/personalize/full/conclusion.html">
+        Conclusion
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/prerequisites.html" title="Prerequisites" class="dd-item
+        
+        
+        
+        ">
+      <a href="/prerequisites.html">
+          Prerequisites
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/prerequisites/prerequisites.html" title="Environment" class="dd-item ">
+        <a href="/prerequisites/prerequisites.html">
+        Environment
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/prerequisites/jupyter.html" title="Jupyter Notebooks" class="dd-item ">
+        <a href="/prerequisites/jupyter.html">
+        Jupyter Notebooks
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/prerequisites/cloud9.html" title="Cloud9 Setup" class="dd-item ">
+        <a href="/prerequisites/cloud9.html">
+        Cloud9 Setup
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/start.html" title="SageMaker" class="dd-item
+        
+        
+        
+        ">
+      <a href="/start.html">
+          SageMaker
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/start/create.html" title="Create the Notebook" class="dd-item ">
+        <a href="/start/create.html">
+        Create the Notebook
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/start/clone.html" title="Clone the Service Repos" class="dd-item ">
+        <a href="/start/clone.html">
+        Clone the Service Repos
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/step.html" title="Step Functions" class="dd-item
+        
+        
+        
+        ">
+      <a href="/step.html">
+          Step Functions
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/step/upload.html" title="Upload the data to S3" class="dd-item ">
+        <a href="/step/upload.html">
+        Upload the data to S3
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/step/crawler.html" title="Create the Crawler" class="dd-item ">
+        <a href="/step/crawler.html">
+        Create the Crawler
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/step/gluejob.html" title="Create the Glue Job" class="dd-item ">
+        <a href="/step/gluejob.html">
+        Create the Glue Job
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/step/orchestration.html" title="Orchestration" class="dd-item ">
+        <a href="/step/orchestration.html">
+        Orchestration
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/step/createrole.html" title="Create Role" class="dd-item ">
+        <a href="/step/createrole.html">
+        Create Role
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/step/trainmodel.html" title="Train Model Lambda" class="dd-item ">
+        <a href="/step/trainmodel.html">
+        Train Model Lambda
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/step/awaitmodel.html" title="Await Model Lambda" class="dd-item ">
+        <a href="/step/awaitmodel.html">
+        Await Model Lambda
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/step/deploymodel.html" title="Deploy Model Lambda" class="dd-item ">
+        <a href="/step/deploymodel.html">
+        Deploy Model Lambda
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/step/usemodel.html" title="Use Model to Predict" class="dd-item ">
+        <a href="/step/usemodel.html">
+        Use Model to Predict
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/step/createstep.html" title="Create Step Function" class="dd-item ">
+        <a href="/step/createstep.html">
+        Create Step Function
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/step/schedule.html" title="Schedule the State Machine" class="dd-item ">
+        <a href="/step/schedule.html">
+        Schedule the State Machine
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/step/cloudformation.html" title="Cloudformation Template" class="dd-item ">
+        <a href="/step/cloudformation.html">
+        Cloudformation Template
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/builtin.html" title="Built-in Algorithms" class="dd-item
+        
+        
+        
+        ">
+      <a href="/builtin.html">
+          Built-in Algorithms
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/builtin/xgboost.html" title="Video Game Sales Prediction with XGBoost" class="dd-item ">
+        <a href="/builtin/xgboost.html">
+        Video Game Sales Prediction with XGBoost
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/builtin/resnet.html" title="Image Classification with ResNet" class="dd-item ">
+        <a href="/builtin/resnet.html">
+        Image Classification with ResNet
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/builtin/rcf.html" title="Anomaly Detection with Random Cut Forest" class="dd-item ">
+        <a href="/builtin/rcf.html">
+        Anomaly Detection with Random Cut Forest
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/builtin/parallelized.html" title="Parallelized Data Distribution" class="dd-item ">
+        <a href="/builtin/parallelized.html">
+        Parallelized Data Distribution
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/custom.html" title="Custom Algorithms" class="dd-item
+        parent
+        
+        
+        ">
+      <a href="/custom.html">
+          Custom Algorithms
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/custom/code.html" title="Submit custom code" class="dd-item ">
+        <a href="/custom/code.html">
+        Submit custom code
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/custom/algo.html" title="Use your own custom algorithms" class="dd-item ">
+        <a href="/custom/algo.html">
+        Use your own custom algorithms
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/custom/containers.html" title="Overview of containers for Amazon SageMaker" class="dd-item active">
+        <a href="/custom/containers.html">
+        Overview of containers for Amazon SageMaker
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/security_for_sysops.html" title="Build Secure Environments" class="dd-item
+        
+        
+        
+        ">
+      <a href="/security_for_sysops.html">
+          Build Secure Environments
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/security_for_sysops/scenario.html" title="Scenario" class="dd-item ">
+        <a href="/security_for_sysops/scenario.html">
+        Scenario
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/security_for_sysops/tools.html" title="Tools" class="dd-item ">
+        <a href="/security_for_sysops/tools.html">
+        Tools
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/security_for_sysops/security_overview.html" title="Security Overview" class="dd-item ">
+        <a href="/security_for_sysops/security_overview.html">
+        Security Overview
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/security_for_sysops/best_practice.html" title="Codify Best Practice" class="dd-item
+        
+        
+        
+        ">
+      <a href="/security_for_sysops/best_practice.html">
+          Codify Best Practice
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/security_for_sysops/best_practice/service_catalog.html" title="Self-Service with Guard Rails" class="dd-item ">
+        <a href="/security_for_sysops/best_practice/service_catalog.html">
+        Self-Service with Guard Rails
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/security_for_sysops/best_practice/best_practice_lab.html" title="Lab 1: Best Practice as Code" class="dd-item ">
+        <a href="/security_for_sysops/best_practice/best_practice_lab.html">
+        Lab 1: Best Practice as Code
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/security_for_sysops/team_resources.html" title="Project Environment" class="dd-item
+        
+        
+        
+        ">
+      <a href="/security_for_sysops/team_resources.html">
+          Project Environment
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/security_for_sysops/team_resources/secure_networking.html" title="Secure Networking" class="dd-item ">
+        <a href="/security_for_sysops/team_resources/secure_networking.html">
+        Secure Networking
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/security_for_sysops/team_resources/secure_environment_lab.html" title="Lab 2: Secure Environment" class="dd-item ">
+        <a href="/security_for_sysops/team_resources/secure_environment_lab.html">
+        Lab 2: Secure Environment
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/security_for_sysops/secure_notebook.html" title="Working Securely" class="dd-item
+        
+        
+        
+        ">
+      <a href="/security_for_sysops/secure_notebook.html">
+          Working Securely
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/security_for_sysops/secure_notebook/secure_notebook.html" title="Secure Notebooks" class="dd-item ">
+        <a href="/security_for_sysops/secure_notebook/secure_notebook.html">
+        Secure Notebooks
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/security_for_sysops/secure_notebook/secure_notebook_lab.html" title="Lab 3: Deploy a Jupyter Notebook" class="dd-item ">
+        <a href="/security_for_sysops/secure_notebook/secure_notebook_lab.html">
+        Lab 3: Deploy a Jupyter Notebook
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/security_for_sysops/detective.html" title="Detection and Remediation" class="dd-item
+        
+        
+        
+        ">
+      <a href="/security_for_sysops/detective.html">
+          Detection and Remediation
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/security_for_sysops/detective/detective_controls.html" title="Detective Controls" class="dd-item ">
+        <a href="/security_for_sysops/detective/detective_controls.html">
+        Detective Controls
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/security_for_sysops/detective/detective_lab.html" title="Lab 4: Detective and Corrective Controls" class="dd-item ">
+        <a href="/security_for_sysops/detective/detective_lab.html">
+        Lab 4: Detective and Corrective Controls
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/security_for_sysops/preventive.html" title="Prevention" class="dd-item
+        
+        
+        
+        ">
+      <a href="/security_for_sysops/preventive.html">
+          Prevention
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/security_for_sysops/preventive/preventive_controls.html" title="Preventive Controls" class="dd-item ">
+        <a href="/security_for_sysops/preventive/preventive_controls.html">
+        Preventive Controls
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/security_for_sysops/preventive/preventive_lab.html" title="Lab 5: Preventive Controls" class="dd-item ">
+        <a href="/security_for_sysops/preventive/preventive_lab.html">
+        Lab 5: Preventive Controls
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/security_for_sysops/summary.html" title="Summary" class="dd-item ">
+        <a href="/security_for_sysops/summary.html">
+        Summary
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/security_for_sysops/faq.html" title="Frequently Asked Questions" class="dd-item ">
+        <a href="/security_for_sysops/faq.html">
+        Frequently Asked Questions
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/security_for_users.html" title="Use Secure Environments" class="dd-item
+        
+        
+        
+        ">
+      <a href="/security_for_users.html">
+          Use Secure Environments
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/security_for_users/scenario.html" title="Scenario" class="dd-item ">
+        <a href="/security_for_users/scenario.html">
+        Scenario
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/security_for_users/tools.html" title="Tools &amp; Knowledge Check" class="dd-item ">
+        <a href="/security_for_users/tools.html">
+        Tools &amp; Knowledge Check
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/security_for_users/security_overview.html" title="Security Overview" class="dd-item ">
+        <a href="/security_for_users/security_overview.html">
+        Security Overview
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/security_for_users/environment.html" title="Deploy a Secure Environment" class="dd-item
+        
+        
+        
+        ">
+      <a href="/security_for_users/environment.html">
+          Deploy a Secure Environment
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/security_for_users/environment/secure_notebook.html" title="Secure Notebooks" class="dd-item ">
+        <a href="/security_for_users/environment/secure_notebook.html">
+        Secure Notebooks
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/security_for_users/environment/env_deploy_lab.html" title="Lab 01: Deploy the environment" class="dd-item ">
+        <a href="/security_for_users/environment/env_deploy_lab.html">
+        Lab 01: Deploy the environment
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/security_for_users/environment/secure_notebook_lab.html" title="Lab 02: Deploy a Notebook" class="dd-item ">
+        <a href="/security_for_users/environment/secure_notebook_lab.html">
+        Lab 02: Deploy a Notebook
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/security_for_users/notebook.html" title="Secure Data Science Notebooks" class="dd-item
+        
+        
+        
+        ">
+      <a href="/security_for_users/notebook.html">
+          Secure Data Science Notebooks
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/security_for_users/notebook/ml_lifecycle.html" title="Security Objectives" class="dd-item ">
+        <a href="/security_for_users/notebook/ml_lifecycle.html">
+        Security Objectives
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/security_for_users/notebook/notebook_lab_01.html" title="Lab 03: Data Science Workflow" class="dd-item ">
+        <a href="/security_for_users/notebook/notebook_lab_01.html">
+        Lab 03: Data Science Workflow
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/security_for_users/notebook/notebook_lab_02.html" title="Lab 04: DevOps Workflow" class="dd-item ">
+        <a href="/security_for_users/notebook/notebook_lab_02.html">
+        Lab 04: DevOps Workflow
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/security_for_users/summary.html" title="Summary" class="dd-item ">
+        <a href="/security_for_users/summary.html">
+        Summary
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/security_for_users/faq.html" title="Frequently Asked Questions" class="dd-item ">
+        <a href="/security_for_users/faq.html">
+        Frequently Asked Questions
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/cleanup.html" title="Cleanup" class="dd-item
+        
+        
+        
+        ">
+      <a href="/cleanup.html">
+          Cleanup
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/cleanup/sagemaker.html" title="SageMaker Resources" class="dd-item ">
+        <a href="/cleanup/sagemaker.html">
+        SageMaker Resources
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/cleanup/workspace.html" title="Cleanup the Workspace" class="dd-item ">
+        <a href="/cleanup/workspace.html">
+        Cleanup the Workspace
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/conclusion.html" title="Conclusion" class="dd-item
+        
+        
+        
+        ">
+      <a href="/conclusion.html">
+          Conclusion
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/conclusion/conclusion.html" title="What Have We Accomplished" class="dd-item ">
+        <a href="/conclusion/conclusion.html">
+        What Have We Accomplished
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+        
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3></h3>
+        <ul>
+          
+              <li>
+                  <a class="padding" href="https://www.smartworkz.nl"><i class='fa-solid fa-globe'></i> Web site</a>
+              </li>
+          
+              <li>
+                  <a class="padding" href="https://www.linkedin.com/company/smartworkznl"><i class='fa-brands fa-linkedin'></i> LinkedIn</a>
+              </li>
+          
+              <li>
+                  <a class="padding" href="https://github.com/smartworkz-kyriacos/sagemaker-workshop.git"><i class='fa-brands fa-github'></i> GitHub</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="footer">
+      <left>
+    <h5 class="copyright">&copy; 2022 Smartworkz Cloud Consultants</h5>
+    
+    <h5 class="legal"><a href="/">Privacy</a> &nbsp;|&nbsp; <a href="/">Site terms</a></h5>
+
+</left>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+<script src="https://kit.fontawesome.com/d9c6148b9d.js" crossorigin="anonymous"></script>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>Amazon Sagemaker Workshop</a> > <a href='/custom.html'>Custom Algorithms</a> > Overview of containers for Amazon SageMaker
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#anatomy-of-an-amazon-sagemaker-container">Anatomy of an Amazon SageMaker container</a></li>
+        <li><a href="#example-container-folder">Example container folder</a></li>
+        <li><a href="#running-a-container-for-amazon-sagemaker-training">Running a container for Amazon SageMaker training</a></li>
+        <li><a href="#running-a-container-for-sagemaker-hosting">Running a container for SageMaker hosting</a></li>
+        <li><a href="#storing-sagemaker-containers">Storing SageMaker Containers</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Overview of containers for Amazon SageMaker
+            </h1>
+          
+
+        
+
+
+<p>SageMaker makes extensive use of Docker containers to allow users to train and deploy algorithms. Containers allow developers and data scientists to package software into standardized units that run consistently on any platform that supports Docker. Containerization packages code, runtime, system tools, system libraries and settings all in the same place, isolating it from its surroundings, and insuring a consistent runtime regardless of where it is being run.</p>
+<p>When you develop a model in Amazon SageMaker, you can provide separate Docker images for the training code and the inference code, or you can combine them into a single Docker image.</p>
+<h3 id="anatomy-of-an-amazon-sagemaker-container">Anatomy of an Amazon SageMaker container</h3>
+<p><img src="/images/sm-containers.gif" alt="Containers"></p>
+<p>Using this powerful container environment, developers can deploy any kind of code in the Amazon SageMaker ecosystem. You can also create a logical division of labor by creating a deployment team, such as a DevOps, security, and infrastructure teams (who maintains the container) and a data scientists team (who focuses on producing models that are later added to the container).</p>
+<h3 id="example-container-folder">Example container folder</h3>
+<p>The <a href="https://github.com/awslabs/amazon-sagemaker-examples/tree/master/advanced_functionality/scikit_bring_your_own">Bring Your Own scikit Algorithm</a> example provides a detailed walkthrough on how to package a scikit-learn algorithm for training and production-ready hosting using containers. Let&rsquo;s take a look at the <em>container</em> folder structure to explain how Amazon SageMaker runs Docker for training and hosting your own algorithm.</p>
+<pre tabindex="0"><code>container/
+  Dockerfile
+  build_and_push.sh
+  decision_trees/
+      nginx.conf
+      predictor.py
+      serve
+      train
+      wsgi.py
+</code></pre><p>Let&rsquo;s discuss each of these in turn:</p>
+<ul>
+<li><code>Dockerfile</code> describes how to build your Docker container image. More details below.</li>
+<li><code>build_and_push.sh</code> is a script that uses the <code>Dockerfile</code> to build your container images and then pushes it to Amazon ECR.</li>
+<li><code>decision_trees</code> is the directory which contains the files that will be installed in the container.</li>
+</ul>
+<p>In this simple application, only five files are installed in the container. You may only need that many or, if you have many supporting routines, you may wish to install more. These five show the standard structure of our Python containers, although you are free to choose a different toolset and therefore could have a different layout. If you&rsquo;re writing in a different programming language, you&rsquo;ll certainly have a different layout depending on the frameworks and tools you choose.</p>
+<p>The files that will be installed in the container are:</p>
+<ul>
+<li><code>nginx.conf</code> is the configuration file for the nginx front-end.</li>
+<li><code>predictor.py</code> is the program that actually implements the Flask web server and the decision tree predictions for this app.</li>
+<li><code>serve</code> is the program started when the container is started for hosting. It simply launches the gunicorn server which runs multiple instances of the Flask app defined in <code>predictor.py</code>.</li>
+<li><code>train</code> is the program that is invoked when the container is run for training.</li>
+<li><code>wsgi.py</code> is a small wrapper used to invoke the Flask app.</li>
+</ul>
+<h4 id="the-dockerfile">The Dockerfile</h4>
+<p>The Dockerfile describes the image that you want to build. You can think of it as describing the complete operating system installation of the system that you want to run. A Docker container running is quite a bit lighter than a full operating system, however, because it takes advantage of Linux on the host machine for the basic operations.</p>
+<p>For the Python science stack, we will start from a standard Ubuntu installation and run the normal tools to install the things needed by scikit-learn. Finally, we add the code that implements our specific algorithm to the container and set up the right environment to run under.</p>
+<p>Along the way, we clean up extra space. This makes the container smaller and faster to start.</p>
+<p>Let&rsquo;s look at the Dockerfile for the example:</p>
+<pre tabindex="0"><code># Build an image that can do training and inference in SageMaker
+# This is a Python 2 image that uses the nginx, gunicorn, flask stack
+# for serving inferences in a stable way.
+
+FROM ubuntu:16.04
+
+MAINTAINER Amazon AI &lt;sage-learner@amazon.com&gt;
+
+
+RUN apt-get -y update &amp;&amp; apt-get install -y --no-install-recommends \
+         wget \
+         python \
+         nginx \
+         ca-certificates \
+    &amp;&amp; rm -rf /var/lib/apt/lists/*
+
+# Here we get all python packages.
+# There&#39;s substantial overlap between scipy and numpy that we eliminate by
+# linking them together. Likewise, pip leaves the install caches populated which uses
+# a significant amount of space. These optimizations save a fair amount of space in the
+# image, which reduces start up time.
+RUN wget https://bootstrap.pypa.io/get-pip.py &amp;&amp; python get-pip.py &amp;&amp; \
+    pip install numpy scipy scikit-learn pandas flask gevent gunicorn &amp;&amp; \
+        (cd /usr/local/lib/python2.7/dist-packages/scipy/.libs; rm *; ln ../../numpy/.libs/* .) &amp;&amp; \
+        rm -rf /root/.cache
+
+# Set some environment variables. PYTHONUNBUFFERED keeps Python from buffering our standard
+# output stream, which means that logs can be delivered to the user quickly. PYTHONDONTWRITEBYTECODE
+# keeps Python from writing the .pyc files which are unnecessary in this case. We also update
+# PATH so that the train and serve programs are found when the container is invoked.
+
+ENV PYTHONUNBUFFERED=TRUE
+ENV PYTHONDONTWRITEBYTECODE=TRUE
+ENV PATH=&#34;/opt/program:${PATH}&#34;
+
+# Set up the program in the image
+COPY decision_trees /opt/program
+WORKDIR /opt/program
+</code></pre><h3 id="running-a-container-for-amazon-sagemaker-training">Running a container for Amazon SageMaker training</h3>
+<p>Amazon SageMaker invokes the training code by running a version of the following command:</p>
+<pre tabindex="0"><code>docker run &lt;image&gt; train
+</code></pre><p>This means that your Docker image should have an executable file in it that is called <code>train</code>. You will modify this program to implement your training algorithm. This can be in any language that is capable of running inside of the Docker environment, but the most common language options for data scientists include Python, R, Scala, and Java. For our Scikit example, we use Python.</p>
+<p>At runtime, Amazon SageMaker injects the training data from an Amazon S3 location into the container. The training program ideally should produce a model artifact. The artifact is written, inside of the container, then packaged into a compressed tar archive and pushed to an Amazon S3 location by Amazon SageMaker.</p>
+<p>When Amazon SageMaker runs training, your <code>train</code> script is run just like any regular program. A number of files are laid out for your use, under the <code>/opt/ml</code> directory:</p>
+<pre tabindex="0"><code>/opt/ml
+├── input
+│   ├── config
+│   │   ├── hyperparameters.json
+│   │   └── resourceConfig.json
+│   └── data
+│       └── &lt;channel_name&gt;
+│           └── &lt;input data&gt;
+├── model
+│   └── &lt;model files&gt;
+└── output
+    └── failure
+</code></pre><h4 id="the-input">The input</h4>
+<ul>
+<li><code>/opt/ml/input/config</code> contains information to control how your program runs. <code>hyperparameters.json</code> is a JSON-formatted dictionary of hyperparameter names to values. These values will always be strings, so you may need to convert them. <code>resourceConfig.json</code> is a JSON-formatted file that describes the network layout used for distributed training. Since scikit-learn doesn&rsquo;t support distributed training, we&rsquo;ll ignore it here.</li>
+<li><code>/opt/ml/input/data/&lt;channel_name&gt;/</code> (for File mode) contains the input data for that channel. The channels are created based on the call to CreateTrainingJob but it&rsquo;s generally important that channels match what the algorithm expects. The files for each channel will be copied from S3 to this directory, preserving the tree structure indicated by the S3 key structure.</li>
+<li><code>/opt/ml/input/data/&lt;channel_name&gt;_&lt;epoch_number&gt;</code> (for Pipe mode) is the pipe for a given epoch. Epochs start at zero and go up by one each time you read them. There is no limit to the number of epochs that you can run, but you must close each pipe before reading the next epoch.</li>
+</ul>
+<h4 id="the-output">The output</h4>
+<ul>
+<li><code>/opt/ml/model/</code> is the directory where you write the model that your algorithm generates. Your model can be in any format that you want. It can be a single file or a whole directory tree. SageMaker will package any files in this directory into a compressed tar archive file. This file will be available at the S3 location returned in the DescribeTrainingJob result.</li>
+<li><code>/opt/ml/output</code> is a directory where the algorithm can write a file failure that describes why the job failed. The contents of this file will be returned in the FailureReason field of the DescribeTrainingJob result. For jobs that succeed, there is no reason to write this file as it will be ignored.</li>
+</ul>
+<h3 id="running-a-container-for-sagemaker-hosting">Running a container for SageMaker hosting</h3>
+<p>Amazon SageMaker invokes hosting service by running a version of the following command</p>
+<pre tabindex="0"><code>docker run &lt;image&gt; serve
+</code></pre><p>This launches a RESTful API to serve HTTP requests for inference. Again, this can be done in any language or framework that works within the Docker environment.</p>
+<p>In most Amazon SageMaker containers, <code>serve</code> is simply a wrapper that starts the inference server. Furthermore, Amazon SageMaker injects the model artifact produced in training into the container and unarchives it automatically.</p>
+<p>Amazon SageMaker uses two URLs in the container:</p>
+<ul>
+<li><code>/ping</code> will receive GET requests from the infrastructure. Your program returns 200 if the container is up and accepting requests.</li>
+<li><code>/invocations</code> is the endpoint that receives client inference POST requests. The format of the request and the response is up to the algorithm. If the client supplied ContentType and Accept headers, these will be passed in as well.</li>
+</ul>
+<h3 id="storing-sagemaker-containers">Storing SageMaker Containers</h3>
+<p>For SageMaker to run a container for training or hosting, it needs to be able to find the image hosted in the image repository, Amazon Elastic Container Registry (Amazon ECR). The three main steps to this process are building locally, tagging with the repository location, and pushing the image to the repository.</p>
+<p>To build the local image, call the following command:</p>
+<pre tabindex="0"><code>docker build &lt;image name&gt;
+</code></pre><p>This takes instructions from the Dockerfile we discussed earlier to generate an image on your local instance. After the image is built, we need to let our local instance of Docker know where to store the image so that SageMaker can find it. We do this by tagging the image with the following command:</p>
+<pre tabindex="0"><code>docker tag &lt;image name&gt; &lt;repository name&gt;
+</code></pre><p>The repository name has the following structure:</p>
+<pre tabindex="0"><code>&lt;account number&gt;.dkr.ecr.&lt;region&gt;.amazonaws.com/&lt;image name&gt;:&lt;tag&gt;
+</code></pre><p>Without tagging the image with the repository name, Docker defaults to uploading to Docker Hub, and not Amazon ECR. Amazon SageMaker currently requires Docker images to reside in Amazon ECR. To push an image to ECR, and not the central Docker registry, you must tag it with the registry hostname.</p>
+<p>Unlike Docker Hub, Amazon ECR images are private by default, which is a good practice with Amazon SageMaker. If you want to share your Amazon SageMaker images publicly, you can find more information in the Amazon ECR User Guide.</p>
+<p>Finally, to upload the image to Amazon ECR, with the Region set in the repository name tag, call the following command:</p>
+<pre tabindex="0"><code>docker push &lt;repository name&gt;
+</code></pre><p>One final note on Amazon SageMaker Docker containers. We have already shown you that you have the option to build one Docker container serving both training and hosting, or you can build one for each. While building two Docker images can increase storage requirements and cost due to duplicated common libraries, you might get a benefit from building a significantly smaller inference container, allowing the hosting service to scale more quickly when reacting to traffic increases. This is especially common when you use GPUs for training, but your inference code is optimized for CPUs. You need to consider the tradeoffs when you decide if you want to build a single container or two.</p>
+
+
+<footer class="footline">
+	
+</footer>
+
+        
+        </div>
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/custom/algo.html" title="Use your own custom algorithms"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/security_for_sysops.html" title="Build Secure Environments" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1668966810"></script>
+    <script src="/js/perfect-scrollbar.min.js?1668966810"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1668966810"></script>
+    <script src="/js/jquery.sticky.js?1668966810"></script>
+    <script src="/js/featherlight.min.js?1668966810"></script>
+    <script src="/js/highlight.pack.js?1668966810"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom-3.6.0.js?1668966810"></script>
+    <script src="/js/learn.js?1668966810"></script>
+    <script src="/js/hugo-learn.js?1668966810"></script>
+    
+        
+            <script src="/mermaid/mermaid.js?1668966810"></script>
+        
+        <script>
+            mermaid.initialize({ startOnLoad: true });
+        </script>
+    
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-119576367-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script src="/js/shortbreadv1.js?1668966810"></script>
+  </body>
+</html>
+

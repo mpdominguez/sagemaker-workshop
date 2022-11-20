@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lite Version on Amazon SageMaker Workshop</title>
+    <link>/personalize/lite.html</link>
+    <description>Recent content in Lite Version on Amazon SageMaker Workshop</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="/personalize/lite/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Introduction</title>
+      <link>/personalize/lite/introduction.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/personalize/lite/introduction.html</guid>
+      <description>Prerequisites AWS Account User with administrator access to the AWS Account Process First you will deploy a CloudFormation template that will do the following: Create an S3 bucket for all of your data storage. Create a SageMaker Notebook Instance for you to complete the workshop. Create the IAM policies needed for your notebook. Clone this repository into the notebook so you are ready to work. Open the notebook and follow the instructions below.</description>
+    </item>
+    
+    <item>
+      <title>Building Your Environment</title>
+      <link>/personalize/lite/building.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/personalize/lite/building.html</guid>
+      <description>As mentioned above, the first step is to deploy a CloudFormation template that will perform much of the initial setup for you. In another browser window login to your AWS account. Once you have done that open the link below in a new tab to start the process of deploying the items you need via CloudFormation.
+Launch Cloudformation</description>
+    </item>
+    
+    <item>
+      <title>Cloud Formation Wizard</title>
+      <link>/personalize/lite/cloudformation.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/personalize/lite/cloudformation.html</guid>
+      <description>Follow along with the screenshots if you have any questions about these steps.
+Cloud Formation Wizard Start by clicking Next at the bottom like shown:
+In the next page you need to provide a unique S3 bucket name for your file storage, it is recommended to simply add your first name and last name to the end of the default option as shown below, after that update click Next again.</description>
+    </item>
+    
+    <item>
+      <title>Agenda</title>
+      <link>/personalize/lite/agenda.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/personalize/lite/agenda.html</guid>
+      <description>The steps below outline the process of building your own recommendation model, improving it, and then cleaning up all of your resources to prevent any unwanted charges. To get started executing these follow the steps in the next section.
+Personalize_BuildCampaign.ipynb - Guides you through building your first campaign and recommendation algorithm. View_Campaign_And_Interactions.ipynb - Showcase how to generate a recommendation and how to modify it with real time intent. Cleanup.ipynb - Deletes anything that was created so you are not charged for additional resources.</description>
+    </item>
+    
+    <item>
+      <title>Using the Notebooks</title>
+      <link>/personalize/lite/using.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/personalize/lite/using.html</guid>
+      <description>Start by navigating to the SageMaker serivce page by clicking the Services link in the top navigation bar of the AWS console.`
+In the search field enter SageMaker and then click for the service when it appears, from the service page click the Notebook Instances link on the far left menu bar.
+To get to the Jupyter interface, simply click Open JupyterLab on the far right next to your notebook instance.</description>
+    </item>
+    
+    <item>
+      <title>After the Notebooks</title>
+      <link>/personalize/lite/clean.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/personalize/lite/clean.html</guid>
+      <description>Once you have completed all of the work in the Notebooks and have completed the cleanup steps there as well, the last thing to do is to delete the stack you created with CloudFormation. To do that, inside the AWS Console again click the Services link at the top, and this time enter in CloudFormation and click the link for it.
+Click the Delete button on the demo stack you created:</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,66 @@
+---
+new_page_extension: md
+auto_deploy: false
+admin_path: ''
+webhook_url: 
+sections:
+- type: directory
+  path: content
+  label: Pages
+  create: all
+  match: "*"
+- type: directory
+  path: content/security_for_users
+  label: Security for users
+  create: all
+  match: "**/*"
+- type: directory
+  path: content/security_for_sysops
+  label: Security for sysops
+  create: all
+  match: "**/*"
+- type: directory
+  path: content/prerequisites
+  label: Prerequisites
+  create: all
+  match: "**/*"
+- type: directory
+  path: content/introduction
+  label: Introduction
+  create: all
+  match: "**/*"
+- type: directory
+  path: content/custom
+  label: Custom
+  create: all
+  match: "**/*"
+- type: directory
+  path: content/conclusion
+  label: Conclusion
+  create: all
+  match: "**/*"
+- type: directory
+  path: content/cleanup
+  label: Cleanup
+  create: all
+  match: "**/*"
+- type: directory
+  path: content/builtin
+  label: Builtin
+  create: all
+  match: "**/*"
+upload_dir: static/images
+public_path: "/images"
+front_matter_path: ''
+use_front_matter_path: true
+file_template: ":filename:"
+build:
+  preview_env:
+  - HUGO_ENV=staging
+  - HUGO_VERSION=0.81.0
+  preview_output_directory: public
+  preview_docker_image: forestryio/hugo:latest
+  mount_path: "/srv"
+  working_dir: "/srv"
+  instant_preview_command: hugo server -D -E -F --renderToDisk -d public
+version: 0.81.0

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Prerequisites on Amazon SageMaker Workshop</title>
+    <link>/prerequisites.html</link>
+    <description>Recent content in Prerequisites on Amazon SageMaker Workshop</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="/prerequisites/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Environment</title>
+      <link>/prerequisites/prerequisites.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/prerequisites/prerequisites.html</guid>
+      <description>AWS Account In order to complete this workshop you&amp;rsquo;ll need an AWS Account, and an AWS IAM user in that account with at least full permissions to the following AWS services:
+AWS IAM Amazon S3 Amazon SageMaker AWS Cloud9 Use Your Own Account: The code and instructions in this workshop assume only one student is using a given AWS account at a time. If you try sharing an account with another student, you&amp;rsquo;ll run into naming conflicts for certain resources.</description>
+    </item>
+    
+    <item>
+      <title>Jupyter Notebooks</title>
+      <link>/prerequisites/jupyter.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/prerequisites/jupyter.html</guid>
+      <description>Jupyter is an open-source web application that allows you to create and share documents that contain live code, equations, visualizations and narrative text. Uses include: data cleaning and transformation, numerical simulation, statistical modelling, data visualization, machine learning, and much more. With respect to code, it can be thought of as a web-based IDE that executes code on the server it is running on instead of locally.
+There are two main types of &amp;ldquo;cells&amp;rdquo; in a notebook: code cells, and &amp;ldquo;markdown&amp;rdquo; cells with explanatory text.</description>
+    </item>
+    
+    <item>
+      <title>Cloud9 Setup</title>
+      <link>/prerequisites/cloud9.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/prerequisites/cloud9.html</guid>
+      <description>AWS Cloud9 is a cloud-based integrated development environment (IDE) that lets you write, run, and debug your code with just a browser. It includes a code editor, debugger, and terminal. Cloud9 comes pre-packaged with essential tools for popular programming languages and the AWS Command Line Interface (CLI) pre-installed so you don’t need to install files or configure your laptop for this workshop. Your Cloud9 environment will have access to the same AWS resources as the user with which you logged into the AWS Management Console.</description>
+    </item>
+    
+  </channel>
+</rss>

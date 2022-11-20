@@ -1,0 +1,836 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Amazon Sagemaker Workshop on Amazon SageMaker Workshop</title>
+    <link>/</link>
+    <description>Recent content in Amazon Sagemaker Workshop on Amazon SageMaker Workshop</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Introduction</title>
+      <link>/personalize/lite/introduction.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/personalize/lite/introduction.html</guid>
+      <description>Prerequisites AWS Account User with administrator access to the AWS Account Process First you will deploy a CloudFormation template that will do the following: Create an S3 bucket for all of your data storage. Create a SageMaker Notebook Instance for you to complete the workshop. Create the IAM policies needed for your notebook. Clone this repository into the notebook so you are ready to work. Open the notebook and follow the instructions below.</description>
+    </item>
+    
+    <item>
+      <title>SageMaker Resources</title>
+      <link>/cleanup/sagemaker.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cleanup/sagemaker.html</guid>
+      <description>To avoid charges for resources you no longer need when you&amp;rsquo;re done with this workshop, you can delete them or, in the case of your notebook instance, stop them. Here are the resources you should consider:
+Endpoints: these are the clusters of one or more instances serving inferences from your models. If you did not delete them from within a notebook, you can delete them via the SageMaker console. To do so:</description>
+    </item>
+    
+    <item>
+      <title>Scenario</title>
+      <link>/security_for_sysops/scenario.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/security_for_sysops/scenario.html</guid>
+      <description>You are a member of a Cloud Platform Engineering team that has been tasked with enabling your business&amp;rsquo;s data scientists to deliver machine learning-based projects that are trained on highly sensitive company and customer data. The project teams are constrained by shared on-premise resources so you have been tasked with determining how the business can leverage the cloud to provision environments for the data science teams. The environment must be secure, protecting the sensitive data, while also enabling the data science teams to self-service.</description>
+    </item>
+    
+    <item>
+      <title>Scenario</title>
+      <link>/security_for_users/scenario.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/security_for_users/scenario.html</guid>
+      <description>You are a data scientist or ML engineer who works at a company that wishes to enable their data scientists to deliver machine learning-based projects that are trained on highly sensitive company data. The project teams are constrained by shared on-premise resources so your sysops admins have created all the infrastructure-as-code templates needed to provision a secure environment, which protects the sensitive data while also enabling the data science teams to self-service.</description>
+    </item>
+    
+    <item>
+      <title>Submit custom code</title>
+      <link>/custom/code.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/custom/code.html</guid>
+      <description>In this section, you will train a neural network locally on the location from where this notebook is run (typically the SageMaker Notebook instance) using MXNet. You will then see how to create an endpoint from the trained MXNet model and deploy it on SageMaker. You will then inference from the newly created SageMaker endpoint. For this section, you&amp;rsquo;ll be using the MNIST dataset.
+Running the notebook Download the mxnet_mnist_byom.zip file.</description>
+    </item>
+    
+    <item>
+      <title>Video Game Sales Prediction with XGBoost</title>
+      <link>/builtin/xgboost.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/builtin/xgboost.html</guid>
+      <description>In this section, you&amp;rsquo;ll work your way through a Jupyter notebook that demonstrates how to use a built-in algorithm in SageMaker. More specifically, we&amp;rsquo;ll use SageMaker&amp;rsquo;s version of XGBoost, a popular and efficient open-source implementation of the gradient boosted trees algorithm.
+Gradient boosting is a supervised learning algorithm that attempts to predict a target variable by combining the estimates of a set of simpler, weaker models. XGBoost has done remarkably well in machine learning competitions because it robustly handles a wide variety of data types, relationships, and distributions.</description>
+    </item>
+    
+    <item>
+      <title>What Have We Accomplished</title>
+      <link>/conclusion/conclusion.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/conclusion/conclusion.html</guid>
+      <description>We have:
+Created a Notebook for exploratory analysis Creaetd an ETL to prepare training data Trained the model with Hyperparameter Optimization Putted &amp;ldquo;new data&amp;rdquo; through a preprocessing pipeline to get it ready for prediction Automatized batch predictions for new data using a combination of CloudWatch, Step Functions, Lambda, Glue and SageMaker. </description>
+    </item>
+    
+    <item>
+      <title>Building Your Environment</title>
+      <link>/personalize/lite/building.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/personalize/lite/building.html</guid>
+      <description>As mentioned above, the first step is to deploy a CloudFormation template that will perform much of the initial setup for you. In another browser window login to your AWS account. Once you have done that open the link below in a new tab to start the process of deploying the items you need via CloudFormation.
+Launch Cloudformation</description>
+    </item>
+    
+    <item>
+      <title>Image Classification with ResNet</title>
+      <link>/builtin/resnet.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/builtin/resnet.html</guid>
+      <description>In this section, you&amp;rsquo;ll work your way through a Jupyter notebook that demonstrates how to use a built-in algorithm in SageMaker. More specifically, you&amp;rsquo;ll use SageMaker&amp;rsquo;s image classification algorithm, a supervised learning algorithm that takes an image as input and classifies it into one of multiple output categories. It uses a convolutional neural network (ResNet) that can be trained from scratch, or trained using transfer learning when a large number of training images are not available.</description>
+    </item>
+    
+    <item>
+      <title>Overview</title>
+      <link>/personalize/full/overview.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/personalize/full/overview.html</guid>
+      <description>This lab will walk you through the following:
+Deploy and configure a Video Recommendation application Setting up a Jupyter Notebook environment for the Amazon Personalize Service Preview Downloading and preparing training data, based on the Movie Lens data set Importing prepared data into Amazon Personalize Building an ML model based upon the Hierarchical Recurrent Neural Network algorithm (HRNN) Testing your model by deploying an Amazon Personalize campaign Adding your campaign to Video Recommendation application </description>
+    </item>
+    
+    <item>
+      <title>Tools</title>
+      <link>/security_for_sysops/tools.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/security_for_sysops/tools.html</guid>
+      <description>To work through these labs you will need:
+An AWS account
+With privileges to create IAM roles, attach IAM policies, create AWS VPCs, configure Service Catalog, create Amazon S3 buckets, and work with Amazon SageMaker.
+Access to the AWS web console
+Many of the instructions will guide you through working with the various service consoles.
+Jupyter cheat sheet
+If you are unfamiliar with the Jupyter notebook interface or its keybindings a cheat sheet may help you navigate.</description>
+    </item>
+    
+    <item>
+      <title>Tools &amp; Knowledge Check</title>
+      <link>/security_for_users/tools.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/security_for_users/tools.html</guid>
+      <description>To work through these labs you will need:
+An AWS account
+With privileges to create IAM roles, attach IAM policies, create AWS VPCs, configure Service Catalog, create Amazon S3 buckets, and work with Amazon SageMaker.
+Access to the AWS web console
+Many of the instructions will guide you through working with the various service consoles.
+To get the most of these labs it will be beneficial if you have prior experience working with the following technologies:</description>
+    </item>
+    
+    <item>
+      <title>Anomaly Detection with Random Cut Forest</title>
+      <link>/builtin/rcf.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/builtin/rcf.html</guid>
+      <description>In this section, you&amp;rsquo;ll work your way through a Jupyter notebook that demonstrates how to use a built-in algorithm in SageMaker. More specifically, you&amp;rsquo;ll use SageMaker&amp;rsquo;s Random Cut Forest (RCF) algorithm, an algorithm designed to detect anomalous data points within a dataset. Examples of when anomalies are important to detect include when website activity uncharacteristically spikes, when temperature data diverges from a periodic behaviour, or when changes to public transit ridership reflect the occurrence of a special event.</description>
+    </item>
+    
+    <item>
+      <title>Cloud Formation Wizard</title>
+      <link>/personalize/lite/cloudformation.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/personalize/lite/cloudformation.html</guid>
+      <description>Follow along with the screenshots if you have any questions about these steps.
+Cloud Formation Wizard Start by clicking Next at the bottom like shown:
+In the next page you need to provide a unique S3 bucket name for your file storage, it is recommended to simply add your first name and last name to the end of the default option as shown below, after that update click Next again.</description>
+    </item>
+    
+    <item>
+      <title>Deploy the App</title>
+      <link>/personalize/full/deploy.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/personalize/full/deploy.html</guid>
+      <description>Deploy the &amp;ldquo;Video Recommendation&amp;rdquo; Application Whilst this application could be deployed anywhere, it uses both an EC2 Amazon Machine Image (AMI) and RDS Snapshot that have been stored in the North Virgina Region of AWS (us-east-1). Hence, please make sure that the Region selected in the AWS Console is alway US East (N.Virginia), as shown in the following diagram. The workshop will only function correctly if the EC2 configuration, CloudFormation template executiion and SageMaker notebook are all using this AWS Region.</description>
+    </item>
+    
+    <item>
+      <title>Setup your Jupyter Notebook</title>
+      <link>/personalize/full/setup.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/personalize/full/setup.html</guid>
+      <description>Click on Amazon SageMaker from the list of all services by entering Sagemaker into the Find services box. This will bring you to the Amazon SageMaker console homepage.
+Go to the SageMaker menu on the left and choose &amp;ldquo;Notebook instances&amp;rdquo; under the &amp;ldquo;Notebook&amp;rdquo; option.
+Wait until the notebook instance status is InService, then click on Open Jupyter - whilst you&amp;rsquo;re waiting you can perform step #1 of the next section to copy some files from Git</description>
+    </item>
+    
+    <item>
+      <title>Use your own custom algorithms</title>
+      <link>/custom/algo.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/custom/algo.html</guid>
+      <description>In this section, you&amp;rsquo;ll create your own training script using TensorFlow and the building blocks provided in tf.layers, which will predict the ages of abalones based on their physical measurements. It&amp;rsquo;s possible to estimate the age of an abalone (sea snail) by the number of rings on its shell. In this section, you&amp;rsquo;ll be using the UCI Abalone dataset.
+Writing Custom TensorFlow Model Training and Inference Code To train a model on Amazon SageMaker using custom TensorFlow code and deploy it on Amazon SageMaker, you need to implement training and inference code interfaces in your code.</description>
+    </item>
+    
+    <item>
+      <title>Agenda</title>
+      <link>/personalize/lite/agenda.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/personalize/lite/agenda.html</guid>
+      <description>The steps below outline the process of building your own recommendation model, improving it, and then cleaning up all of your resources to prevent any unwanted charges. To get started executing these follow the steps in the next section.
+Personalize_BuildCampaign.ipynb - Guides you through building your first campaign and recommendation algorithm. View_Campaign_And_Interactions.ipynb - Showcase how to generate a recommendation and how to modify it with real time intent. Cleanup.ipynb - Deletes anything that was created so you are not charged for additional resources.</description>
+    </item>
+    
+    <item>
+      <title>Creating Parallel Solutions</title>
+      <link>/personalize/full/parallel.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/personalize/full/parallel.html</guid>
+      <description>Create Item-to-Item Similarities Solution Using the same methods as before, go to the Services drop-down in the console and navigate to the Amazon Personalize service in another tab, and select Dataset groups. You will see the dataset group that you created earlier, and click on the name of your dataset group.
+The left-hand side, which will show you the solution that you&amp;rsquo;re currently creating via your notebook. Then, select Solutions and recipes, then click on the Create solution button.</description>
+    </item>
+    
+    <item>
+      <title>Parallelized Data Distribution</title>
+      <link>/builtin/parallelized.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/builtin/parallelized.html</guid>
+      <description>SageMaker makes it easy to train machine learning models across a cluster containing a large number of machines. This a non-trivial process, but SageMaker&amp;rsquo;s built-in algorithms and pre-built MXNet and TensorFlow containers hide most of the complexity from you. Nevertheless, there are decisions about how to structure data that will have implications regarding how the distributed training is carried out.
+In this section, you will learn about how to take full advantage of distributed training clusters when using one of SageMaker&amp;rsquo;s built-in algorithms.</description>
+    </item>
+    
+    <item>
+      <title>Configure the Video Recommendation App</title>
+      <link>/personalize/full/videorecommendation.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/personalize/full/videorecommendation.html</guid>
+      <description>Django only allows access via pre-defined source IP addresses. Naturally, these could be open to the internet, but they recommend only exposing it the instance private IP address (for internal calls) and to your front-end load balancer. You already have a reference to the private IP address, so you now need to extract the Load Balancer DNS entry. Go back to the EC2 console screen, but this time select Load Balancers on the left-hand menu; select your Application Load Balancer and in the details screen that comes up select the DNS name and store it for later.</description>
+    </item>
+    
+    <item>
+      <title>Overview of containers for Amazon SageMaker</title>
+      <link>/custom/containers.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/custom/containers.html</guid>
+      <description>SageMaker makes extensive use of Docker containers to allow users to train and deploy algorithms. Containers allow developers and data scientists to package software into standardized units that run consistently on any platform that supports Docker. Containerization packages code, runtime, system tools, system libraries and settings all in the same place, isolating it from its surroundings, and insuring a consistent runtime regardless of where it is being run.
+When you develop a model in Amazon SageMaker, you can provide separate Docker images for the training code and the inference code, or you can combine them into a single Docker image.</description>
+    </item>
+    
+    <item>
+      <title>Security Overview</title>
+      <link>/security_for_sysops/security_overview.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/security_for_sysops/security_overview.html</guid>
+      <description>Amazon SageMaker is a powerful enabler and a key component of a data science environment, but it&amp;rsquo;s only part of what is required to build a complete secure data science environment. For more robust security you will need other AWS services such as Amazon CloudWatch, Amazon S3, and AWS VPC. To begin, let&amp;rsquo;s talk about some of the key things you will want in place, working in concert, with Amazon SageMaker.</description>
+    </item>
+    
+    <item>
+      <title>Security Overview</title>
+      <link>/security_for_users/security_overview.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/security_for_users/security_overview.html</guid>
+      <description>Amazon SageMaker is a powerful enabler and a key component of a data science environment, but it&amp;rsquo;s only part of what is required to build a complete secure data science environment. For more robust security you will need other AWS services such as Amazon CloudWatch, Amazon S3, and AWS VPC. To begin, let&amp;rsquo;s talk about some of the key things you will want in place, working in concert, with Amazon SageMaker.</description>
+    </item>
+    
+    <item>
+      <title>Using the Notebooks</title>
+      <link>/personalize/lite/using.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/personalize/lite/using.html</guid>
+      <description>Start by navigating to the SageMaker serivce page by clicking the Services link in the top navigation bar of the AWS console.`
+In the search field enter SageMaker and then click for the service when it appears, from the service page click the Notebook Instances link on the far left menu bar.
+To get to the Jupyter interface, simply click Open JupyterLab on the far right next to your notebook instance.</description>
+    </item>
+    
+    <item>
+      <title>After the Notebooks</title>
+      <link>/personalize/lite/clean.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/personalize/lite/clean.html</guid>
+      <description>Once you have completed all of the work in the Notebooks and have completed the cleanup steps there as well, the last thing to do is to delete the stack you created with CloudFormation. To do that, inside the AWS Console again click the Services link at the top, and this time enter in CloudFormation and click the link for it.
+Click the Delete button on the demo stack you created:</description>
+    </item>
+    
+    <item>
+      <title>Running the Video Recommendation App</title>
+      <link>/personalize/full/runvideorecommendation.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/personalize/full/runvideorecommendation.html</guid>
+      <description>Running the Video Recommendation App You are now ready to run the application server! Simply execute the runmyserver script, and you should see status messages appearing quickly - these initial ones are the Load Balancer health-checks, and after a minute or so the instance should be declared healthy by the Load Balancer Target Group. Note, you will see some warnings around the psycopg2 component, but this can be ignored.
+To execute the runmyserver script</description>
+    </item>
+    
+    <item>
+      <title>Create Additional Personalize Campaigns</title>
+      <link>/personalize/full/additionalpersonalize.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/personalize/full/additionalpersonalize.html</guid>
+      <description>If you have built the additional two Personalize models, for Item-to-Item Similarities and Personal Rankings, then you&amp;rsquo;ll need to create the associated campaigns for these solutions, as it is the campaigns that we will add to the application. If those solutions have been built then continue with these steps, but if not you can always come back to these steps later before adding them to the application.
+In the AWS Console, go to the Amazon Personalize service console, click on Dataset groups link on the left-hand menu, and select the personalize-recs-dataset-group link, then click into the Campaigns menu item on the left.</description>
+    </item>
+    
+    <item>
+      <title>Plug In the Recommendation Model(s)</title>
+      <link>/personalize/full/plugin.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/personalize/full/plugin.html</guid>
+      <description>Plug In the Recommendation Model(s) The application uses the Django Administration feature to define models that are available to the application. This allows multiple models of different types to be configured, and injected or removed from the application at any time. There are three modes of operation of the application:
+Recommendations - standard recommendations, allowing different 2 models to be compared at once Personal Ranking - re-ranks popular films in a genre, with a single model on-screen at once Similar Items - shows items similar to others, with a single model on-screen at once.</description>
+    </item>
+    
+    <item>
+      <title>Additional Campaigns to Build</title>
+      <link>/personalize/full/additionalcampaigns.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/personalize/full/additionalcampaigns.html</guid>
+      <description>If you look at the embedded documentation you&amp;rsquo;ll see that it talks about 3 other models, which there isn&amp;rsquo;t time to build during this Lab. They involve the user of additional data files - a user demographic file, and a item metadata file, all of which are supplied with the Movie Lens data set in your Sagemaker Notebook. Because they required additional data-sets, you need to create each of these within their own Personalize Dataset Group, and you also need to re-import the original interactions file DEMO-movie-lens-100k.</description>
+    </item>
+    
+    <item>
+      <title>Cleaning up</title>
+      <link>/personalize/full/closing.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/personalize/full/closing.html</guid>
+      <description>Terminating the Notebook Instance Open the Amazon SageMaker console and click on Notebook instances Find the notebook instance listed as [Name]-lab-notebook, select its radio button and then click the Actions dropdown.
+Click Stop to stop the Notebook Instance. This does not delete the underlying data and resources. After a few minutes the instance status will change to Stopped, and you can now click on the Actions dropdown again, but this time select Delete.</description>
+    </item>
+    
+    <item>
+      <title>Cleanup the Workspace</title>
+      <link>/cleanup/workspace.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cleanup/workspace.html</guid>
+      <description>Clean Up:
+Delete Glue Tables https://us-east-1.console.aws.amazon.com/glue/home?region=us-east-1#catalog:tab=tables Delete Glue Crawler https://us-east-1.console.aws.amazon.com/glue/home?region=us-east-1#catalog:tab=crawlers Delete Glue ETL https://us-east-1.console.aws.amazon.com/glue/home?region=us-east-1#etl:tab=jobs Delete Lambda Functions https://console.aws.amazon.com/lambda/home?region=us-east-1#/functions Delete Cloudwatch Rule https://console.aws.amazon.com/cloudwatch/home?region=us-east-1#rules: Delete State Machine https://console.aws.amazon.com/states/home?region=us-east-1#/statemachines Delete IAM Roles https://console.aws.amazon.com/iam/home?region=us-east-1#/roles Delete Endpoint Configurations https://us-east-1.console.aws.amazon.com/sagemaker/home?region=us-east-1#/endpointConfig Delete Endpoints https://us-east-1.console.aws.amazon.com/sagemaker/home?region=us-east-1#/endpoints Delete Inference Models https://us-east-1.console.aws.amazon.com/sagemaker/home?region=us-east-1#/models Terminate Notebook Instance https://us-east-1.console.aws.amazon.com/sagemaker/home?region=us-east-1#/notebook-instances Delete Created Bucket https://s3.console.aws.amazon.com/s3/home?region=us-east-1# Remove AWSGlueServiceRole-billing-crawler-role https://console.aws.amazon.com/iam/home?region=us-east-1#/roles Remove AWSGlueServiceRole-reseller-crawler-role https://console.aws.amazon.com/iam/home?region=us-east-1#/roles Run drop table implementationdb in https://us-east-1.console.aws.amazon.com/athena/home?region=us-east-1#query </description>
+    </item>
+    
+    <item>
+      <title>Conclusion</title>
+      <link>/personalize/full/conclusion.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/personalize/full/conclusion.html</guid>
+      <description>Upon completion of this lab you will have performed the following:
+Launched a Jupyter notebook from with the Amazon SageMaker service Imported external files into the notebook environment Seen how to enable Preview services within a notebook (assuming your account has been whitelisted for Preview access) Used the pandas libraries to do some pre-processing of the source data Built and deployed an ML model based upon the HRNN algorithm Tested your model via just a few lines of code Deployed your model into a live application You should now be able to embed this model from within your own application code, using any language that is supported by the AWS SDK.</description>
+    </item>
+    
+    <item>
+      <title>Environment</title>
+      <link>/prerequisites/prerequisites.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/prerequisites/prerequisites.html</guid>
+      <description>AWS Account In order to complete this workshop you&amp;rsquo;ll need an AWS Account, and an AWS IAM user in that account with at least full permissions to the following AWS services:
+AWS IAM Amazon S3 Amazon SageMaker AWS Cloud9 Use Your Own Account: The code and instructions in this workshop assume only one student is using a given AWS account at a time. If you try sharing an account with another student, you&amp;rsquo;ll run into naming conflicts for certain resources.</description>
+    </item>
+    
+    <item>
+      <title>Machine Learning</title>
+      <link>/introduction/concepts.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/introduction/concepts.html</guid>
+      <description>This section describes a typical machine learning workflow and summarizes how you accomplish those tasks with Amazon SageMaker.
+In machine learning, you &amp;ldquo;teach&amp;rdquo; a computer to make predictions, or inferences. First, you use an algorithm and example data to train a model. Then you integrate your model into your application to generate inferences in real time and at scale. In a production environment, a model typically learns from millions of example data items and produces inferences in hundreds to less than 20 milliseconds.</description>
+    </item>
+    
+    <item>
+      <title>Secure Networking</title>
+      <link>/security_for_sysops/team_resources/secure_networking.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/security_for_sysops/team_resources/secure_networking.html</guid>
+      <description>Amazon SageMaker allows you to create resources attached to your AWS Virtual Private Cloud (VPC). This allows you to govern access to SageMaker resources and your data sets using familiar tools such as security groups, routing tables, and VPC endpoints. Using these network-layer tools you can create a secure network environment that allows you to explicitly control the data ingress and egress of your data science environment. Please take a few moments and read about these tools in more detail.</description>
+    </item>
+    
+    <item>
+      <title>Secure Notebooks</title>
+      <link>/security_for_users/environment/secure_notebook.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/security_for_users/environment/secure_notebook.html</guid>
+      <description>Amazon SageMaker is designed to empower data scientists and developers, enabling them to build more quickly and remain focused on their machine learning project. One of the ways that SageMaker does this is by providing hosted Jupyter Notebook servers. With a single API call users can create a Jupyter Notebook server with the latest patches and kernels available. No need to install software, patch or maintain systems - it is all done for you.</description>
+    </item>
+    
+    <item>
+      <title>Security Objectives</title>
+      <link>/security_for_users/notebook/ml_lifecycle.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/security_for_users/notebook/ml_lifecycle.html</guid>
+      <description>A secure environment is an enabler for teams, allowing them to focus on their project and the business challenge it is trying to solve. From the perspective of a project team the environment is intended to support the team in achieving the following objectives:
+Compute and Network Isolation
+In working with the Amazon SageMaker service you will need to configure training jobs and similar resources using practices inline with security policy.</description>
+    </item>
+    
+    <item>
+      <title>Upload the data to S3</title>
+      <link>/step/upload.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/step/upload.html</guid>
+      <description>First you need to create a bucket for this experiment. Upload the data from the following public location to your own S3 bucket. To facilitate the work of the crawler use two different prefixs (folders): one for the billing information and one for reseller.
+We can execute this on the console of the Jupyter Notebook or we can just execute it directly:
+Download the data Your Bucket Name
+your_bucket = &amp;#39;&amp;lt;YOUR BUCKET NAME e.</description>
+    </item>
+    
+    <item>
+      <title>Create the Crawler</title>
+      <link>/step/crawler.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/step/crawler.html</guid>
+      <description>To use this csv information in the context of a Glue ETL, first we have to create a Glue crawler pointing to the location of each file. The crawler will try to figure out the data types of each column. The safest way to do this process is to create one crawler for each table pointing to a different location.
+Go to the AWS Console.
+Select under Services AWS Glue.</description>
+    </item>
+    
+    <item>
+      <title>Introduction</title>
+      <link>/airflow/introduction.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/airflow/introduction.html</guid>
+      <description>Introduction ML workflows consist of tasks that are often cyclical and iterative to improve the accuracy of the model and achieve better results. We recently announced new integrations with Amazon SageMaker that allow you to build and manage these workflows:
+AWS Step Functions automates and orchestrates Amazon SageMaker related tasks in an end-to-end workflow. You can automate publishing datasets to Amazon S3, training an ML model on your data with Amazon SageMaker, and deploying your model for prediction.</description>
+    </item>
+    
+    <item>
+      <title>Lab 2: Secure Environment</title>
+      <link>/security_for_sysops/team_resources/secure_environment_lab.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/security_for_sysops/team_resources/secure_environment_lab.html</guid>
+      <description>A data science project team have requested a cloud environment to begin their project. As a project administrator you will use the Service Catalog portfolio, managed by the Cloud Platform Engineering team, to provision a secure VPC and related resources for the data science team. In this lab, you will use AWS Service Catalog to provision this data science environment. By following the steps below you will create an environment which contains:</description>
+    </item>
+    
+    <item>
+      <title>Create the Glue Job</title>
+      <link>/step/gluejob.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/step/gluejob.html</guid>
+      <description>Now we are going to create a GLUE ETL job in python 3.6. In this job, we can combine both the ETL from Notebook #2 and the Preprocessing Pipeline from Notebook #4.
+Note that, instead of reading from a csv file, we are going to use Athena to read from the resulting tables of the Glue Crawler.
+Glue is a serverless service so the processing power assigned is meassured in (Data Processing Units) DPUs.</description>
+    </item>
+    
+    <item>
+      <title>High-Level Solution</title>
+      <link>/airflow/highlevel.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/airflow/highlevel.html</guid>
+      <description>We’ll start by exploring the data, transforming the data, and training a model on the data. We’ll fit the ML model using an Amazon SageMaker managed training cluster. We’ll then deploy to an endpoint to perform batch predictions on the test data set. All of these tasks will be plugged into a workflow that can be orchestrated and automated through Apache Airflow integration with Amazon SageMaker.
+The following diagram shows the ML workflow we’ll implement for building the recommender system.</description>
+    </item>
+    
+    <item>
+      <title>Airflow Concepts</title>
+      <link>/airflow/airflowconcepts.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/airflow/airflowconcepts.html</guid>
+      <description>Before implementing the solution, let’s get familiar with Airflow concepts. If you are already familiar with Airflow concepts, skip to the Airflow Amazon SageMaker operators section.
+Apache Airflow is an open-source tool for orchestrating workflows and data processing pipelines. Airflow allows you to configure, schedule, and monitor data pipelines programmatically in Python to define all the stages of the lifecycle of a typical workflow management.
+Airflow nomenclature DAG (Directed Acyclic Graph): DAGs describe how to run a workflow by defining the pipeline in Python, that is configuration as code.</description>
+    </item>
+    
+    <item>
+      <title>Orchestration</title>
+      <link>/step/orchestration.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/step/orchestration.html</guid>
+      <description>Now it&amp;rsquo;s time to create all the necesary steps to schedule the training, deployment and inference with the model. For this, we are going to use an architecture similar to the serverless sagemaker orchestration but adapted to our specific problem.
+First, we need to create lambda functions capables of:
+Training the model Awaiting for training Deploying the model Awaiting for deploy Predict, save predictions and delete the endpoint So, let&amp;rsquo;s do it</description>
+    </item>
+    
+    <item>
+      <title>Airflow Setup</title>
+      <link>/airflow/airflowsetup.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/airflow/airflowsetup.html</guid>
+      <description>We will set up a simple Airflow architecture with a scheduler, worker, and web server running on a single instance. Typically, you will not use this setup for production workloads. We will use AWS CloudFormation to launch the AWS services required to create the components in this blog post. The following diagram shows the configuration of the architecture to be deployed.
+The stack includes the following:
+An Amazon Elastic Compute Cloud (EC2) instance to set up the Airflow components.</description>
+    </item>
+    
+    <item>
+      <title>Create Role</title>
+      <link>/step/createrole.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/step/createrole.html</guid>
+      <description>Create a role with SageMaker and S3 access To execute this lambdas we are going to need a role SageMaker and S3 permissions.
+Follow this link:
+https://console.aws.amazon.com/iam/home?region=us-east-1#/roles$new?step=type
+Select Lambda - Next In Permissions: Select AmazonSageMakerFullAccess and AmazonS3FullAccess In Tags: Next In Name: workshop-role - Create role Make sure AmazonSageMakerFullAccess and AmazonS3FullAccess are in place Go to the Trust relationships tab and click Edit trust relationship Delete the Policy Document and paste: { &amp;#34;Version&amp;#34;: &amp;#34;2012-10-17&amp;#34;, &amp;#34;Statement&amp;#34;: [ { &amp;#34;Effect&amp;#34;: &amp;#34;Allow&amp;#34;, &amp;#34;Principal&amp;#34;: { &amp;#34;Service&amp;#34;: [ &amp;#34;lambda.</description>
+    </item>
+    
+    <item>
+      <title>Building an ML Workflow</title>
+      <link>/airflow/buildingworkflow.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/airflow/buildingworkflow.html</guid>
+      <description>In this section, we’ll create a ML workflow using Airflow operators, including Amazon SageMaker operators to build the recommender. You can download the companion Jupyter notebook to look at individual tasks used in the ML workflow. We’ll highlight the most important pieces here.
+Data preprocessing As mentioned earlier, the dataset contains ratings from over 2 million Amazon customers on over 160,000 digital videos. More details on the dataset are here. After analyzing the dataset, we see that there are only about 5 percent of customers who have rated 5 or more videos, and only 25 percent of videos have been rated by 9+ customers.</description>
+    </item>
+    
+    <item>
+      <title>Train Model Lambda</title>
+      <link>/step/trainmodel.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/step/trainmodel.html</guid>
+      <description>Go to the AWS Console and under Services, select Lambda Go to the Functions Pane and select Create Function Author from scratch Or follow this link https://console.aws.amazon.com/lambda/home?region=us-east-1#/create?firstrun=true Parameters for the function: * Name: lambdaModelTrain * Runtime Python 3.6 * Executing role: Use an existing role and select the role you created in the previous step (workshop-role) - Create function This lambda function doesn&amp;rsquo;t need to receive any parameters, but it should return the resulting hyperparameter tunning optimization job name.</description>
+    </item>
+    
+    <item>
+      <title>Await Model Lambda</title>
+      <link>/step/awaitmodel.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/step/awaitmodel.html</guid>
+      <description>Go to the AWS Console and under Services, select Lambda Go to the Functions Pane and select Create Function Author from scratch Or follow this link https://console.aws.amazon.com/lambda/home?region=us-east-1#/create?firstrun=true Parameters for the function: Name: lambdaModelAwait Runtime: Python 3.6 Executing role: Use an existing role and select the role you created in the previous step (workshop-role) - Create function This lambda function, now receives the output of the previous step and allows us to check if the process is done or not.</description>
+    </item>
+    
+    <item>
+      <title>Deploy Model Lambda</title>
+      <link>/step/deploymodel.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/step/deploymodel.html</guid>
+      <description>Deploy Model In SageMaker: Lambda Function
+In this lambda function, we are going to need to use the best training job from the previous step to deploy a predictor.
+Go to the AWS Console and under Services, select Lambda Go to the Functions Pane and select Create Function Author from scratch Or follow this link https://console.aws.amazon.com/lambda/home?region=us-east-1#/create?firstrun=true Parameters for the function: Name: lambdaModelDeploy Runtime: Python 3.6 Executing role: Use an existing role and select the role you created in the previous step (workshop-role) - Create function The ARN for the variable EXECUTION_ROLE can be found here: https://console.</description>
+    </item>
+    
+    <item>
+      <title>Putting it all together</title>
+      <link>/airflow/puttingalltogether.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/airflow/puttingalltogether.html</guid>
+      <description>Airflow DAG integrates all the tasks we’ve described as a ML workflow. Airflow DAG is a Python script where you express individual tasks with Airflow operators, set task dependencies, and associate the tasks to the DAG to run on demand or at a scheduled interval. The Airflow DAG script is divided into following sections.
+Set DAG with parameters such as schedule interval, concurrency, etc. dag = DAG( dag_id=&amp;#39;sagemaker-ml-pipeline&amp;#39;, default_args=args, schedule_interval=None, concurrency=1, max_active_runs=1, user_defined_filters={&amp;#39;tojson&amp;#39;: lambda s: JSONEncoder().</description>
+    </item>
+    
+    <item>
+      <title>Clean up</title>
+      <link>/airflow/cleanup.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/airflow/cleanup.html</guid>
+      <description>Now to the final step, cleaning up the resources.
+To avoid unnecessary charges on your AWS account do the following:
+Destroy all of the resources created by the CloudFormation stack in Airflow set up by deleting the stack after you’re done experimenting with it. You can follow the steps here to delete the stack. You have to manually delete the S3 bucket created by the CloudFormation stack because AWS CloudFormation can’t delete a non-empty Amazon S3 bucket.</description>
+    </item>
+    
+    <item>
+      <title>Use Model to Predict</title>
+      <link>/step/usemodel.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/step/usemodel.html</guid>
+      <description>In this lambda function, we are going to use the deployed model to predict.
+Go to the AWS Console and under Services, select Lambda Go to the Functions Pane and select Create Function Author from scratch Or follow this link https://console.aws.amazon.com/lambda/home?region=us-east-1#/create?firstrun=true Parameters for the function: Name: lambdaModelPredict Runtime: Python 3.6 Executing role: Use an existing role and select the role you created in the previous step (workshop-role) - Create function This last lambda function doesn&amp;rsquo;t take any parameters, but in this case we need to touch the default parameters of the lambda to configure Max Memory in 1024 MB and Timeout in 15 Mins.</description>
+    </item>
+    
+    <item>
+      <title>Conclusion</title>
+      <link>/airflow/conclusion.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/airflow/conclusion.html</guid>
+      <description>In this workshop, you have seen that building an ML workflow involves quite a bit of preparation but it helps improve the rate of experimentation, engineering productivity, and maintenance of repetitive ML tasks. Airflow Amazon SageMaker Operators provide a convenient way to build ML workflows and integrate with Amazon SageMaker.
+You can extend the workflows by customizing the Airflow DAGs with any tasks that better fit your ML workflows, such as feature engineering, creating an ensemble of training models, creating parallel training jobs, and retraining models to adapt to the data distribution changes.</description>
+    </item>
+    
+    <item>
+      <title>Create Step Function</title>
+      <link>/step/createstep.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/step/createstep.html</guid>
+      <description>Now we have to create a step function to orchestrate the execution of all the previous step.
+Follow this link: https://console.aws.amazon.com/states/home?region=us-east-1#/statemachines/create
+This is the resulting diagram:
+For step function we use the ASL markup language. We have to change all the arn from 1111111111111 to our account number.
+{ &amp;#34;StartAt&amp;#34;: &amp;#34;ETL&amp;#34;, &amp;#34;States&amp;#34;: { &amp;#34;ETL&amp;#34;: { &amp;#34;Type&amp;#34;: &amp;#34;Task&amp;#34;, &amp;#34;Resource&amp;#34;: &amp;#34;arn:aws:states:::glue:startJobRun.sync&amp;#34;, &amp;#34;Parameters&amp;#34;: { &amp;#34;JobName&amp;#34;: &amp;#34;etlandpipeline&amp;#34; }, &amp;#34;Next&amp;#34;: &amp;#34;StartTrainingJob&amp;#34; }, &amp;#34;StartTrainingJob&amp;#34;: { &amp;#34;Type&amp;#34;: &amp;#34;Task&amp;#34;, &amp;#34;Resource&amp;#34;: &amp;#34;arn:aws:lambda:us-east-1:1111111111111:function:lambdaModelTrain&amp;#34;, &amp;#34;ResultPath&amp;#34;: &amp;#34;$&amp;#34;, &amp;#34;Next&amp;#34;: &amp;#34;CheckStatusTraining&amp;#34; }, &amp;#34;CheckStatusTraining&amp;#34;: { &amp;#34;Type&amp;#34;: &amp;#34;Task&amp;#34;, &amp;#34;Resource&amp;#34;: &amp;#34;arn:aws:lambda:us-east-1:1111111111111:function:lambdaModelAwait&amp;#34;, &amp;#34;ResultPath&amp;#34;: &amp;#34;$&amp;#34;, &amp;#34;Next&amp;#34;: &amp;#34;CheckTrainingBranch&amp;#34; }, &amp;#34;CheckTrainingBranch&amp;#34;: { &amp;#34;Type&amp;#34;: &amp;#34;Choice&amp;#34;, &amp;#34;Choices&amp;#34;: [ { &amp;#34;Or&amp;#34;: [{ &amp;#34;Variable&amp;#34;: &amp;#34;$.</description>
+    </item>
+    
+    <item>
+      <title>Schedule the State Machine</title>
+      <link>/step/schedule.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/step/schedule.html</guid>
+      <description>Well! we have all greens on our state machine, time to put the cron in order to forget about this
+We are going to use Cloudwacth Event Rules to create a scheduled task in order to execute this once a day.
+Follow this link: https://console.aws.amazon.com/cloudwatch/home?region=us-east-1#rules:action=create
+And we fill the form like this:
+Event Source: Schedule Cron expression: 0 10 * * ? * (every day at 10 AM UTC) Targets: Step Functions state machine State machine: the name of your state machine Create a new role for this specific resource - Configure details Name: MLcron - Create rule And that&amp;rsquo;s it!</description>
+    </item>
+    
+    <item>
+      <title>Cloudformation Template</title>
+      <link>/step/cloudformation.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/step/cloudformation.html</guid>
+      <description>In case that you want to deploy the stack without going step by step, here is the Cloudformation stack:
+https://console.aws.amazon.com/cloudformation/home#/stacks/new?stackName=LabStack&amp;amp;region=us-east-1&amp;amp;templateURL=https://mrtdomshare.s3.amazonaws.com/sagemakerworkshop-step/sagemaker-step-functions.yml
+The only step that you have to make manually is uploading the data to S3 (the Billing and Reseller folder with the csv files)
+Then you go to step functions, and execute it manually to see the whole process</description>
+    </item>
+    
+    <item>
+      <title>Create the Notebook</title>
+      <link>/start/create.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/start/create.html</guid>
+      <description>Follow this link to create a notebook instance:
+https://us-east-1.console.aws.amazon.com/sagemaker/home?region=us-east-1#/notebook-instances/create
+We&amp;rsquo;ll give a name to the notebook instance and in &amp;ldquo;Notebook instance type&amp;rdquo; we&amp;rsquo;ll select
+ml.m4.4xlarge Create an IAM role with access to:
+Any S3 bucket Athena Full Access. On the Git repositories tab, choose the option &amp;ldquo;Clone a public Git Repository to this notebook instance only&amp;rdquo; an paste the following repo url: https://github.com/githubmg/buildon-workshop
+The rest of the data, let&amp;rsquo;s leave it by default and click &amp;ldquo;Create notebook instance&amp;rdquo;.</description>
+    </item>
+    
+    <item>
+      <title>Jupyter Notebooks</title>
+      <link>/prerequisites/jupyter.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/prerequisites/jupyter.html</guid>
+      <description>Jupyter is an open-source web application that allows you to create and share documents that contain live code, equations, visualizations and narrative text. Uses include: data cleaning and transformation, numerical simulation, statistical modelling, data visualization, machine learning, and much more. With respect to code, it can be thought of as a web-based IDE that executes code on the server it is running on instead of locally.
+There are two main types of &amp;ldquo;cells&amp;rdquo; in a notebook: code cells, and &amp;ldquo;markdown&amp;rdquo; cells with explanatory text.</description>
+    </item>
+    
+    <item>
+      <title>Lab 01: Deploy the environment</title>
+      <link>/security_for_users/environment/env_deploy_lab.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/security_for_users/environment/env_deploy_lab.html</guid>
+      <description>In the following steps you will use AWS CloudFormation and AWS Service Catalog to create a self-service mechanism to create secure data science environments. You will first deploy a CloudFormation template which provisions a shared service environment which hosts a PyPI mirror along with a detective control to enforce Amazon SageMaker resources being attached to a VPC. The template will also create a product portfolio in AWS Service Catalog which enables users with appropriate permissions to create a data science environment dedicated to a single project.</description>
+    </item>
+    
+    <item>
+      <title>Lab 03: Data Science Workflow</title>
+      <link>/security_for_users/notebook/notebook_lab_01.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/security_for_users/notebook/notebook_lab_01.html</guid>
+      <description>The ML lifecylce has many stages and steps, and often requires revisiting previous steps as you tune your model. This lab is intended to highlight how your project team can work through the ML lifecycle and achive the objectives outlined earlier through supporting services such as experiment tracking.
+The notebook explained 01_SageMaker-DataScientist-Workflow.ipynb will cover a typical Data Scientist workflow of data exploration, model training, extracting model feature importances and committing your code to Git.</description>
+    </item>
+    
+    <item>
+      <title>Self-Service with Guard Rails</title>
+      <link>/security_for_sysops/best_practice/service_catalog.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/security_for_sysops/best_practice/service_catalog.html</guid>
+      <description>Allowing users in the cloud to self-service and provision cloud resources on-demand is a powerful enabler for project teams but can be a concern from an operational risk perspective. However, if you can empower your developers to self-service, while enforcing guard rails and best practice, then the operational and security teams will also benefit. With enforced guard rails and best practice you can be confident that, while developers are creating resources they need, they are doing so in a manner that is inline with your policies and requirements.</description>
+    </item>
+    
+    <item>
+      <title>Clone the Service Repos</title>
+      <link>/start/clone.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/start/clone.html</guid>
+      <description>Now, let&amp;rsquo;s open a Terminal in our notebook by going to &amp;ldquo;New/Terminal&amp;rdquo; and perform the following commands
+cd ~/SageMaker git clone https://github.com/githubmg/buildon-workshop If we reload the Notebook, we&amp;rsquo;ll see a new folder &amp;ldquo;buildon-workshop&amp;rdquo; and inside another one called &amp;ldquo;pure-sagemaker-workshop&amp;rdquo;</description>
+    </item>
+    
+    <item>
+      <title>Lab 1: Best Practice as Code</title>
+      <link>/security_for_sysops/best_practice/best_practice_lab.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/security_for_sysops/best_practice/best_practice_lab.html</guid>
+      <description>Before you can begin creating templates for deployment by the Project Administration team you will need a shared services VPC to host a Python package mirror (PyPI) for use by data science teams. The mirror will host a collection of approved Python packages. The concept of a shared services VPC or PyPI mirror is not something that is detailed in this workshop, and is partially assumed as common practice among many AWS customers.</description>
+    </item>
+    
+    <item>
+      <title>Cloud9 Setup</title>
+      <link>/prerequisites/cloud9.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/prerequisites/cloud9.html</guid>
+      <description>AWS Cloud9 is a cloud-based integrated development environment (IDE) that lets you write, run, and debug your code with just a browser. It includes a code editor, debugger, and terminal. Cloud9 comes pre-packaged with essential tools for popular programming languages and the AWS Command Line Interface (CLI) pre-installed so you don’t need to install files or configure your laptop for this workshop. Your Cloud9 environment will have access to the same AWS resources as the user with which you logged into the AWS Management Console.</description>
+    </item>
+    
+    <item>
+      <title>Lab 04: DevOps Workflow</title>
+      <link>/security_for_users/notebook/notebook_lab_02.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/security_for_users/notebook/notebook_lab_02.html</guid>
+      <description>In notebook 02_SageMaker-DevOps-Workflow.ipynb, you will complete the machine learning lifecycle and deliver a model into production. As a DevOps Engineer you will pick up the model trained by the data scientists and deploy it as an endpoint. You will also set up model monitoring on the endpoint for detecting data drift. This notebook is primarily focused on two aspects of running machine learning models in production, monitoring the model&amp;rsquo;s performance and being able to demonstrate the model&amp;rsquo;s lineage.</description>
+    </item>
+    
+    <item>
+      <title>Secure Notebooks</title>
+      <link>/security_for_sysops/secure_notebook/secure_notebook.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/security_for_sysops/secure_notebook/secure_notebook.html</guid>
+      <description>Amazon SageMaker is designed to empower data scientists and developers, enabling them to build more quickly and remain focused on their machine learning project. One of the ways that SageMaker does this is by providing hosted Jupyter Notebook servers. With a single API call users can create a Jupyter Notebook server with the latest patches and kernels available. No need to install software, patch or maintain systems - it is all done for you.</description>
+    </item>
+    
+    <item>
+      <title>Lab 02: Deploy a Notebook</title>
+      <link>/security_for_users/environment/secure_notebook_lab.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/security_for_users/environment/secure_notebook_lab.html</guid>
+      <description>Your project team has been presented with IAM roles and a Service Catalog Portfolio to allow your team to self service and obtain resources to support your efforts. Following the steps below use this portfolio to create a Jupyter notebook instance for yourself.
+Launch the notebook product Click into the details for the data science environment product you provisioned in the last step and find the link to assume the role of a data science user.</description>
+    </item>
+    
+    <item>
+      <title>Lab 3: Deploy a Jupyter Notebook</title>
+      <link>/security_for_sysops/secure_notebook/secure_notebook_lab.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/security_for_sysops/secure_notebook/secure_notebook_lab.html</guid>
+      <description>At this point, the cloud platform engineering team has built a self-service mechanism to provision secure environments to host data science projects. The project administrators have provisioned resources using the self-service mechanism for your team to work, and they have provided you with a self-service mechanism to enable you to provision SageMaker notebooks. Now, use these resources to provision a Jupyter notebook and start developing your ML solution.
+Launch the notebook product Navigate to the AWS Service Catalog console and on go to the detail page for the recently provisioned data science environment.</description>
+    </item>
+    
+    <item>
+      <title>Create a Notebook Instance</title>
+      <link>/introduction/notebook.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/introduction/notebook.html</guid>
+      <description>SageMaker provides hosted Jupyter notebooks that require no setup, so you can begin processing your training data sets immediately. With a few clicks in the SageMaker console, you can create a fully managed notebook instance, pre-loaded with useful libraries for machine learning. You need only add your data.
+You&amp;rsquo;ll start by creating an Amazon S3 bucket that will be used throughout the workshop. You&amp;rsquo;ll then create a SageMaker notebook instance, which you will use for the other workshop modules.</description>
+    </item>
+    
+    <item>
+      <title>Detective Controls</title>
+      <link>/security_for_sysops/detective/detective_controls.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/security_for_sysops/detective/detective_controls.html</guid>
+      <description>AWS recommends a defense-in-depth approach to security, applying security at every level of your application and environment. In this section we will focus on the concept of detective controls and incident response in the form of a corrective control. A detective control is responsible for identifying potential security threats or incidents while a corrective control is responsible for limiting the potential damage of the threat or incident after detection.
+One example of a form of detective control is the use of internal auditing to ensure that an environment and user practice is inline with your policies and requirements.</description>
+    </item>
+    
+    <item>
+      <title>Lab 4: Detective and Corrective Controls</title>
+      <link>/security_for_sysops/detective/detective_lab.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/security_for_sysops/detective/detective_lab.html</guid>
+      <description>In this lab you will test a remediating detective control that was deployed by the cloud platform engineering team in Lab 1. The control is designed to detect the creation of Amazon SageMaker training jobs outside of the secure data science VPC and terminate them. To do this, you will go through the Jupyter notebook kernel 00_SageMaker-SysOps-Workflow and execute the cells up to and including the creation of a training job.</description>
+    </item>
+    
+    <item>
+      <title>Preventive Controls</title>
+      <link>/security_for_sysops/preventive/preventive_controls.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/security_for_sysops/preventive/preventive_controls.html</guid>
+      <description>Amazon SageMaker, like other services, is goverened by Identity and Access Management (IAM). You configure IAM using policy documents which explicitly grant permissions to your environment.
+AWS IAM is based upon the concepts of Principals, Actions, Resources, and Conditions (PARC). This allows you to specify, using IAM policies who (principals) can do what (actions) to which resources and under what circumstances (conditions). Conditions are a powerful part of IAM policies and gives you the ability to control aspects of the actions being taken by principals in your environment.</description>
+    </item>
+    
+    <item>
+      <title>Lab 5: Preventive Controls</title>
+      <link>/security_for_sysops/preventive/preventive_lab.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/security_for_sysops/preventive/preventive_lab.html</guid>
+      <description>In this lab, you will implement a preventive control that will stop a training job from starting if it&amp;rsquo;s not launched within a VPC. In the interest of defence in depth you will implement the preventive control to complement the detective control exercised in the previous lab.
+The preventive control you will deploy here is a modification to the IAM policy which grants a user&amp;rsquo;s notebook the permission to launch a training job.</description>
+    </item>
+    
+    <item>
+      <title>Summary</title>
+      <link>/security_for_sysops/summary.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/security_for_sysops/summary.html</guid>
+      <description>Let&amp;rsquo;s look back on what you&amp;rsquo;ve accomplished during the labs in this section.
+In this series of labs you used many AWS services to support your machine learning process. As the Cloud Platform Engineering team you created a secure network environment with corrective controls for the data science administration team. You also created a self-service product that codified best practices and allowed the Data Science Administration team to support the data science project teams without needing expansive permissions in AWS.</description>
+    </item>
+    
+    <item>
+      <title>Summary</title>
+      <link>/security_for_users/summary.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/security_for_users/summary.html</guid>
+      <description>Let&amp;rsquo;s look back on what you&amp;rsquo;ve accomplished during the labs in this section.
+In this series of labs you used many AWS services to support your machine learning process. As the Cloud Platform Engineering team you created a secure network environment with corrective controls for the data science administration team. You also created a self-service product that codified best practices and allowed the Data Science Administration team to support the data science project teams without needing expansive permissions in AWS.</description>
+    </item>
+    
+    <item>
+      <title>Frequently Asked Questions</title>
+      <link>/security_for_sysops/faq.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/security_for_sysops/faq.html</guid>
+      <description>The following is a compiled list of questions or issues you may face while going through these labs. If you encounter any issues, hopefully you will find helpful guidance below.
+Q: I am trying to execute a cell in Jupyter Notebook but nothing happens.
+A: Check whether the kernel has finished loading. You can see kernel status in the upper right corner of the Notebook. For the purpose of this workshop, the kernel should be conda_tensorflow_p27.</description>
+    </item>
+    
+    <item>
+      <title>Frequently Asked Questions</title>
+      <link>/security_for_users/faq.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/security_for_users/faq.html</guid>
+      <description>The following is a compiled list of questions or issues you may face while going through these labs. If you encounter any issues, hopefully you will find helpful guidance below.
+Q: I am trying to execute a cell in Jupyter Notebook but nothing happens.
+A: Check whether the kernel has finished loading. You can see kernel status in the upper right corner of the Notebook. For the purpose of this workshop, the kernel should be conda_tensorflow_p27.</description>
+    </item>
+    
+    <item>
+      <title>More Resources</title>
+      <link>/more_resources.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/more_resources.html</guid>
+      <description>Discover more AWS resources for building and running your application on AWS:
+More Workshops Amazon EKS Workshop - This workshop guides you through the process of setting up and using a Kubernetes cluster on AWS Amazon ECS Workshop - Learn how to use Stelligent Mu to deploy a microservice architecture that runs in AWS Fargate Amazon Lightsail Workshop - If you are getting started with the cloud and looking for a way to run an extremely low cost environment Lightsail is perfect.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cleanup on Amazon SageMaker Workshop</title>
+    <link>/cleanup.html</link>
+    <description>Recent content in Cleanup on Amazon SageMaker Workshop</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="/cleanup/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SageMaker Resources</title>
+      <link>/cleanup/sagemaker.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cleanup/sagemaker.html</guid>
+      <description>To avoid charges for resources you no longer need when you&amp;rsquo;re done with this workshop, you can delete them or, in the case of your notebook instance, stop them. Here are the resources you should consider:
+Endpoints: these are the clusters of one or more instances serving inferences from your models. If you did not delete them from within a notebook, you can delete them via the SageMaker console. To do so:</description>
+    </item>
+    
+    <item>
+      <title>Cleanup the Workspace</title>
+      <link>/cleanup/workspace.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cleanup/workspace.html</guid>
+      <description>Clean Up:
+Delete Glue Tables https://us-east-1.console.aws.amazon.com/glue/home?region=us-east-1#catalog:tab=tables Delete Glue Crawler https://us-east-1.console.aws.amazon.com/glue/home?region=us-east-1#catalog:tab=crawlers Delete Glue ETL https://us-east-1.console.aws.amazon.com/glue/home?region=us-east-1#etl:tab=jobs Delete Lambda Functions https://console.aws.amazon.com/lambda/home?region=us-east-1#/functions Delete Cloudwatch Rule https://console.aws.amazon.com/cloudwatch/home?region=us-east-1#rules: Delete State Machine https://console.aws.amazon.com/states/home?region=us-east-1#/statemachines Delete IAM Roles https://console.aws.amazon.com/iam/home?region=us-east-1#/roles Delete Endpoint Configurations https://us-east-1.console.aws.amazon.com/sagemaker/home?region=us-east-1#/endpointConfig Delete Endpoints https://us-east-1.console.aws.amazon.com/sagemaker/home?region=us-east-1#/endpoints Delete Inference Models https://us-east-1.console.aws.amazon.com/sagemaker/home?region=us-east-1#/models Terminate Notebook Instance https://us-east-1.console.aws.amazon.com/sagemaker/home?region=us-east-1#/notebook-instances Delete Created Bucket https://s3.console.aws.amazon.com/s3/home?region=us-east-1# Remove AWSGlueServiceRole-billing-crawler-role https://console.aws.amazon.com/iam/home?region=us-east-1#/roles Remove AWSGlueServiceRole-reseller-crawler-role https://console.aws.amazon.com/iam/home?region=us-east-1#/roles Run drop table implementationdb in https://us-east-1.console.aws.amazon.com/athena/home?region=us-east-1#query </description>
+    </item>
+    
+  </channel>
+</rss>

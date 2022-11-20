@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Deploy a Secure Environment on Amazon SageMaker Workshop</title>
+    <link>/security_for_users/environment.html</link>
+    <description>Recent content in Deploy a Secure Environment on Amazon SageMaker Workshop</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="/security_for_users/environment/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Secure Notebooks</title>
+      <link>/security_for_users/environment/secure_notebook.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/security_for_users/environment/secure_notebook.html</guid>
+      <description>Amazon SageMaker is designed to empower data scientists and developers, enabling them to build more quickly and remain focused on their machine learning project. One of the ways that SageMaker does this is by providing hosted Jupyter Notebook servers. With a single API call users can create a Jupyter Notebook server with the latest patches and kernels available. No need to install software, patch or maintain systems - it is all done for you.</description>
+    </item>
+    
+    <item>
+      <title>Lab 01: Deploy the environment</title>
+      <link>/security_for_users/environment/env_deploy_lab.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/security_for_users/environment/env_deploy_lab.html</guid>
+      <description>In the following steps you will use AWS CloudFormation and AWS Service Catalog to create a self-service mechanism to create secure data science environments. You will first deploy a CloudFormation template which provisions a shared service environment which hosts a PyPI mirror along with a detective control to enforce Amazon SageMaker resources being attached to a VPC. The template will also create a product portfolio in AWS Service Catalog which enables users with appropriate permissions to create a data science environment dedicated to a single project.</description>
+    </item>
+    
+    <item>
+      <title>Lab 02: Deploy a Notebook</title>
+      <link>/security_for_users/environment/secure_notebook_lab.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/security_for_users/environment/secure_notebook_lab.html</guid>
+      <description>Your project team has been presented with IAM roles and a Service Catalog Portfolio to allow your team to self service and obtain resources to support your efforts. Following the steps below use this portfolio to create a Jupyter notebook instance for yourself.
+Launch the notebook product Click into the details for the data science environment product you provisioned in the last step and find the link to assume the role of a data science user.</description>
+    </item>
+    
+  </channel>
+</rss>

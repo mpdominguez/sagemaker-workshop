@@ -1,68 +1,47 @@
+baseURL = "/"
 languageCode = "en-us"
-ignoreFiles = [ "\\.files/README.md$",  ]
 defaultContentLanguage = "en"
 title = "Amazon SageMaker Workshop"
-theme = "learn"
-uglyurls = false
-googleAnalytics = "UA-44634850-4"
-sectionPagesMenu = "main"
-relativeURLs = true
+theme = "hugo-theme-learn"
+uglyurls = true
+googleAnalytics = "UA-119576367-1"
 
 [blackfriday]
 hrefTargetBlank = true
 
 [params]
-editURL = "https://github.com/mpdominguez/sagemaker-workshop/edit/master/content/"
 themeVariant = "mine"
 showVisitedLinks = false
-author = "Martin Dominguez, Maria Gaska"
+author = "Daniele Stroppa"
 description = "Amazon SageMaker Workshop"
 disableSearch = false
 disableAssetsBusting = false
-disableLanguageSwitchingButton = true
-disableShortcutsTitle=false
-disableInlineCopyToClipBoard = true
-ghrepo = "https://github.com/mpdominguez/sagemaker-workshop/"
-branch = "master"
-template_bucket = "sagemakerworkshop.com"
-pygmentsUseClasses = true
-pygmentsCodeFences = true
-pygmentsCodefencesGuessSyntax = true
-pygmentsStyle = "tango"
-
-
-
-#
-
-[menu]
-  [[menu.main]]
-    identifier = "Prerequisites"
-    name = "This is the Mu track"
-    title = "Workshop using Mu"
-    url = "/mu/"
-    weight = -110
-
-[[menu.shortcuts]]
-name = "<i class='fas fa-bookmark'></i> More Resources"
-url = "/more_resources"
-weight = 10
-
-[[menu.shortcuts]]
-name = "<i class='fas fa-users'></i> Authors"
-url = "/authors"
-weight = 20
-
-[[menu.shortcuts]]
-name = "<i class='fab fa-github'></i> GitHub Project"
-url = "https://github.com/mpdominguez/sagemaker-workshop"
-weight = 30
-
-[[menu.shortcuts]]
-name = "<i class='fas fa-envelope'></i> Have questions?"
-url = "mailto:sagemakerworkshop@amazon.com"
-weight = 40
-
+disableLandingPageButton = true
+disableShortcutsTitle=true
+disableLanguageSwitchingButton = false
 
 [outputs]
-home = [ "HTML", "JSON"]
-page = [ "HTML" ]
+home = [ "HTML", "AMP", "RSS", "JSON"]
+page = [ "HTML", "AMP"]
+
+
+[[menu.shortcuts]]
+name = "<i class='fa-solid fa-globe'></i> Web site"
+identifier = "ws"
+url = "https://www.smartworkz.nl"
+weight = 1
+
+[[menu.shortcuts]]
+name = "<i class='fa-brands fa-linkedin'></i> LinkedIn"
+identifier = "li"
+url = "https://www.linkedin.com/company/smartworkznl"
+weight = 2
+
+[[menu.shortcuts]]
+name = "<i class='fa-brands fa-github'></i> GitHub"
+identifier = "gh"
+url = "https://github.com/smartworkz-kyriacos/sagemaker-workshop.git"
+weight = 3
+
+
+

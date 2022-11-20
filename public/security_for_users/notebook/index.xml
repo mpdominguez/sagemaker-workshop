@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Secure Data Science Notebooks on Amazon SageMaker Workshop</title>
+    <link>/security_for_users/notebook.html</link>
+    <description>Recent content in Secure Data Science Notebooks on Amazon SageMaker Workshop</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="/security_for_users/notebook/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Security Objectives</title>
+      <link>/security_for_users/notebook/ml_lifecycle.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/security_for_users/notebook/ml_lifecycle.html</guid>
+      <description>A secure environment is an enabler for teams, allowing them to focus on their project and the business challenge it is trying to solve. From the perspective of a project team the environment is intended to support the team in achieving the following objectives:
+Compute and Network Isolation
+In working with the Amazon SageMaker service you will need to configure training jobs and similar resources using practices inline with security policy.</description>
+    </item>
+    
+    <item>
+      <title>Lab 03: Data Science Workflow</title>
+      <link>/security_for_users/notebook/notebook_lab_01.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/security_for_users/notebook/notebook_lab_01.html</guid>
+      <description>The ML lifecylce has many stages and steps, and often requires revisiting previous steps as you tune your model. This lab is intended to highlight how your project team can work through the ML lifecycle and achive the objectives outlined earlier through supporting services such as experiment tracking.
+The notebook explained 01_SageMaker-DataScientist-Workflow.ipynb will cover a typical Data Scientist workflow of data exploration, model training, extracting model feature importances and committing your code to Git.</description>
+    </item>
+    
+    <item>
+      <title>Lab 04: DevOps Workflow</title>
+      <link>/security_for_users/notebook/notebook_lab_02.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/security_for_users/notebook/notebook_lab_02.html</guid>
+      <description>In notebook 02_SageMaker-DevOps-Workflow.ipynb, you will complete the machine learning lifecycle and deliver a model into production. As a DevOps Engineer you will pick up the model trained by the data scientists and deploy it as an endpoint. You will also set up model monitoring on the endpoint for detecting data drift. This notebook is primarily focused on two aspects of running machine learning models in production, monitoring the model&amp;rsquo;s performance and being able to demonstrate the model&amp;rsquo;s lineage.</description>
+    </item>
+    
+  </channel>
+</rss>

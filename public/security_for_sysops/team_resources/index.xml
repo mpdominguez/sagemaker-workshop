@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Project Environment on Amazon SageMaker Workshop</title>
+    <link>/security_for_sysops/team_resources.html</link>
+    <description>Recent content in Project Environment on Amazon SageMaker Workshop</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="/security_for_sysops/team_resources/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Secure Networking</title>
+      <link>/security_for_sysops/team_resources/secure_networking.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/security_for_sysops/team_resources/secure_networking.html</guid>
+      <description>Amazon SageMaker allows you to create resources attached to your AWS Virtual Private Cloud (VPC). This allows you to govern access to SageMaker resources and your data sets using familiar tools such as security groups, routing tables, and VPC endpoints. Using these network-layer tools you can create a secure network environment that allows you to explicitly control the data ingress and egress of your data science environment. Please take a few moments and read about these tools in more detail.</description>
+    </item>
+    
+    <item>
+      <title>Lab 2: Secure Environment</title>
+      <link>/security_for_sysops/team_resources/secure_environment_lab.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/security_for_sysops/team_resources/secure_environment_lab.html</guid>
+      <description>A data science project team have requested a cloud environment to begin their project. As a project administrator you will use the Service Catalog portfolio, managed by the Cloud Platform Engineering team, to provision a secure VPC and related resources for the data science team. In this lab, you will use AWS Service Catalog to provision this data science environment. By following the steps below you will create an environment which contains:</description>
+    </item>
+    
+  </channel>
+</rss>
